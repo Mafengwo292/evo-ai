@@ -31,3 +31,10 @@ Thumbs.db
 *.pem
 *.key
 .git-credentials
+# GitHub auth
+data/github_*.txt
+data/*.cookie
+*.cookie
+
+# Zip files (too big for GitHub)
+zip/
