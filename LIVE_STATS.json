@@ -1,0 +1,32 @@
+{
+  "last_updated": "2026-09-18T18:48:00Z",
+  "evo_token": {
+    "circulating": 944500,
+    "total_supply": 82150000000,
+    "swap_rate_evo_per_usd": 12750,
+    "burn_rate": 0.001,
+    "nodes": 15
+  },
+  "model": {
+    "params": 21440,
+    "fitness_current": 0.0092,
+    "fitness_target": 0.5,
+    "generation": 11,
+    "training_chars": 13499,
+    "vocab_size": 72,
+    "evolution_algorithm": "(1+lambda)-ES"
+  },
+  "network": {
+    "public_ip": "47.253.174.153",
+    "public_url_primary": "https://kkkix-47-253-174-153.run.pinggy-free.link",
+    "public_url_backup": "https://59b15f36b60415b9-47-253-174-153.serveousercontent.com",
+    "systemd_services_active": 3,
+    "cron_jobs_active": 20
+  },
+  "github": {
+    "evo_ai_repo": "https://github.com/Mafengwo292/evo-ai",
+    "evoaiagentx_pr": "https://github.com/ANative-Lab/EvoAgentX/pull/283",
+    "files_published": 684,
+    "size_mb": 116.34
+  }
+}
