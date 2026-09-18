@@ -1,0 +1,35 @@
+name: EVO-AI Sandbox Watchdog
+
+on:
+  schedule:
+    # Every 15 minutes - check if server is up
+    - cron: '*/15 * * * *'
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  check_server:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      - name: Check API
+        run: |
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 https://47.253.174.153/api/info || echo "000")
+          echo "api_status=$HTTP_CODE" >> $GITHUB_OUTPUT
+          echo "API status: $HTTP_CODE"
+      
+      - name: Alert if down
+        if: steps.check_server.outputs.api_status != '200'
+        run: |
+          echo "## EVO-AI Server Alert" >> $GITHUB_STEP_SUMMARY
+          echo "**Status**: Server down (HTTP ${{ steps.check_server.outputs.api_status }})" >> $GITHUB_STEP_SUMMARY
+          echo "**Time**: $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Server needs reboot. Action: login to Aliyun console, force restart instance." >> $GITHUB_STEP_SUMMARY
+      
+      - name: Discover A2A agents (sandbox-side)
+        run: |
+          curl -s -X POST https://api.github.com/repos/${{ github.repository }}/issues \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "{\"title\":\"EVO-AI Watchdog: $(date -u +%FT%TZ)\",\"body\":\"API status: ${{ steps.check_server.outputs.api_status }}\"}" || true

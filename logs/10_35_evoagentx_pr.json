@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-09-17T10:35:38.645634",
+  "stats": {
+    "nodes": 15,
+    "circulating_evo": 944000.0
+  },
+  "tunnels": {
+    "local": "127.0.0.1:8765 -> 200",
+    "direct": "http://47.253.174.153:80 -> 200",
+    "serveo": "https://59b15f36b60415b9-47-253-174-153.serveousercontent.com -> 200",
+    "pinggy_primary": "https://kkkix-47-253-174-153.run.pinggy-free.link -> 200",
+    "pinggy_alt": "https://pmgrt-47-253-174-153.free.pinggy.net -> 200"
+  },
+  "new_contributions": {
+    "evo_ai_model_for_evoagentx": {
+      "description": "Real EvoAgentX PR with working custom LLM backend",
+      "files": [
+        "evoagentx/models/evo_ai_model.py (12.3KB)",
+        "evoagentx/models/__init__.py (+1 import line)",
+        "EVO_AI_PR.md (PR description)",
+        "EVO_AI_PR.patch (18KB git diff)"
+      ],
+      "verified": "Real import + instantiation + /api/generate call returned 200",
+      "published_urls": {
+        "patch": "https://paste.rs/KIFvi",
+        "model": "https://paste.rs/JgO5q"
+      }
+    }
+  }
+}

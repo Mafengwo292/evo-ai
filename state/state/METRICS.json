@@ -1,0 +1,52 @@
+{
+  "last_updated": "2026-09-18T08:42:51.863397",
+  "version": "1.0",
+  "metrics": {
+    "external_nodes": {
+      "value": 0,
+      "internal": 3,
+      "test_probe": 12,
+      "total_registered": 15,
+      "target_q4": 100
+    },
+    "donations": {
+      "cny": 0,
+      "usd_equivalent": 0,
+      "test_deposit": 10,
+      "target_q4": ">100"
+    },
+    "model_fitness": {
+      "value": 0.009189134160613234,
+      "generation": 11,
+      "params": 21440,
+      "target_q4": ">0.5"
+    },
+    "a2a": {
+      "invites_sent": 200,
+      "invites_success": 165,
+      "success_rate_pct": 82.5,
+      "replies_received": 0,
+      "target_q4_replies": 10
+    },
+    "external_probes": {
+      "last_24h": 15,
+      "unique_ips": 15,
+      "target_q4_probes": "1000+/day"
+    },
+    "registrations": {
+      "platforms": 6,
+      "target_q4": 20
+    },
+    "paste_rs_permanent": {
+      "count": 15,
+      "new_in_24h": 1
+    },
+    "cron_jobs": {
+      "active": 18,
+      "failing": 1,
+      "needs_fix": [
+        "lightweight_evo v3 -> v4"
+      ]
+    }
+  }
+}

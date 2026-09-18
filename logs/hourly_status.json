@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-09-16T10:58:39.811089",
+  "network_stats": {
+    "nodes": 15,
+    "accounts": 50,
+    "circulating": 941592.0,
+    "minted": 941592.0
+  },
+  "evo_test_log_tail": [
+    "[HB #13] 10:54:27 +100 EVO (total: 1300)",
+    "[HB #14] 10:55:27 +100 EVO (total: 1400)",
+    "[HB #15] 10:56:28 +100 EVO (total: 1500)",
+    "[HB #16] 10:57:28 +100 EVO (total: 1600)",
+    "[HB #17] 10:58:29 +100 EVO (total: 1700)"
+  ],
+  "distribution_recent": [
+    {
+      "ts": "2026-09-16T10:55:46.462932",
+      "hashes": {
+        "evo-node": "718623bbeba7",
+        "install.sh": "891f5c8b1d6c",
+        "evo-node.service": "4e3216b4ba57",
+        "docs": "7907115374bc"
+      },
+      "urls": {
+        "evo-node": "https://paste.rs/EcHm1",
+        "install.sh": "https://paste.rs/kMbFR",
+        "evo-node.service": "https://paste.rs/UyU5w",
+        "docs": "https://paste.rs/wIOXz"
+      }
+    },
+    {
+      "ts": "2026-09-16T10:56:47.772764",
+      "hashes": {
+        "evo-node": "718623bbeba7",
+        "install.sh": "891f5c8b1d6c",
+        "evo-node.service": "4e3216b4ba57",
+        "docs": "7907115374bc"
+      },
+      "urls": {
+        "evo-node": "https://paste.rs/8v9Ho",
+        "install.sh": "https://paste.rs/VHnOm",
+        "evo-node.service": "https://paste.rs/2DGNB",
+        "docs": "https://paste.rs/hCcS7"
+      }
+    },
+    {
+      "ts": "2026-09-16T10:57:49.121457",
+      "hashes": {
+        "evo-node": "718623bbeba7",
+        "install.sh": "891f5c8b1d6c",
+        "evo-node.service": "4e3216b4ba57",
+        "docs": "7907115374bc"
+      },
+      "urls": {
+        "evo-node": "https://paste.rs/mYSne",
+        "install.sh": "https://paste.rs/vIwO8",
+        "evo-node.service": "https://paste.rs/ZPVgT",
+        "docs": "https://paste.rs/zEW5g"
+      }
+    }
+  ],
+  "activity_count_today": 1252,
+  "tmux_sessions": [
+    "api27: 1 windows (created Wed Sep 16 09:37:31 2026) [80x24]\nevo-pub: 1 windows (created Wed Sep 16 10:55:44 2026) [80x24]\nevo-test: 1 windows (created Wed Sep 16 10:42:19 2026) [80x24]\nheartbeat: 1 windows (created Wed Sep 16 07:49:30 2026) [80x24]\noa-net2: 1 windows (created Wed Sep 16 07:50:43 2026) [80x24]\npinggy-new: 1 windows (created Wed Sep 16 10:41:33 2026) [80x24]\nrecruit5: 1 windows (created Mon Sep 14 22:03:01 2026) [80x24]\nreg-cont: 1 windows (created Mon Sep 14 22:40:23 2026) [80x24]\nselfcheck: 1 windows (created Mon Sep 14 19:49:04 2026) [80x24]\nserveo: 1 windows (created Wed Sep 16 10:56:17 2026) [80x24]\nserveo-mon: 1 windows (created Wed Sep 16 10:56:58 2026) [80x24]"
+  ]
+}

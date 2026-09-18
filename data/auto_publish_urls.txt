@@ -1,0 +1,28 @@
+=== EVO-AI Public Paste URLs ===
+
+# dpaste.com (永久 paste,Google 索引)
+https://dpaste.com/EW7875BWX  EVO-AI Overview
+https://dpaste.com/HXEFHC6NR  EVO-AI Token
+https://dpaste.com/4LREDA6G4  EVO-AI A2A Spec
+https://dpaste.com/6D8YE3DCY  Quick Start
+
+# p.ip.fi (临时 paste)
+http://p.ip.fi/qf-0  EVO-AI Overview (v1)
+http://p.ip.fi/N2J8  How to join (v2)
+http://p.ip.fi/p-_w  Token (v3)
+http://p.ip.fi/TBdv  Registries (v4)
+http://p.ip.fi/JlXf  Shell Script (v5)
+http://p.ip.fi/gz9-  JS SDK (v6)
+http://p.ip.fi/PerF  A2A Spec (v7)
+http://p.ip.fi/yCR1  Overview (new)
+http://p.ip.fi/fhpD  Token (new)
+http://p.ip.fi/aEPS  A2A Spec (new)
+
+# paste.rs
+https://paste.rs/dZnXM  Overview
+https://paste.rs/9J1FH  How to join
+https://paste.rs/LlEhn  Token
+https://paste.rs/UyPWv  Shell Script
+https://paste.rs/6CAG0  Overview (new)
+https://paste.rs/Ablxp  Token (new)
+https://paste.rs/q9BGr  A2A (new)

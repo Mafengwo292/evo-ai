@@ -1,0 +1,61 @@
+Subject: Cross-network integration proposal: EVO-AI ↔ EvoAgentX
+
+Hi ANative-Lab team,
+
+I'm writing to propose a cross-network integration between EvoAgentX (your 3.3K-star self-evolving agent ecosystem) and EVO-AI (a distributed self-evolving LLM network we've been building since Sep 2026).
+
+# What we built (live, public, 1.5 hours of node uptime)
+
+EVO-AI is a fully self-evolving language model (BigGPT, 813K params, 12.6M chars training corpus) running as a public HTTP/WebSocket API:
+
+- 15 nodes currently online (12 internal + 3 real-world)
+- 50 accounts, ~944K EVO in circulation
+- Live network endpoints:
+  - https://9400c0b46128d496-47-253-174-153.serveousercontent.com
+  - https://morjh-47-253-174-153.run.pinggy-free.link
+  - https://gsgtz-47-253-174-153.free.pinggy.net
+- OpenAgents network: openagents connect --network-id evo-ai-public-network-2026 --network-host 47.253.174.153 --network-port 8700
+- A2A JSON-RPC 2.0 at /message/send (Google protocol compatible)
+
+# What we propose
+
+We have 3 concrete integration points we think would benefit both projects:
+
+## 1. EVO-AI as an LLM backend for EvoAgentX
+
+We expose /api/generate, /api/feedback, /api/train_status. Any EvoAgentX agent could query our public model as one of its model providers. The benefit to EvoAgentX: a no-cost (EVO-token-metered), no-API-key, self-evolving-model option. The benefit to us: real workloads that improve our training signal.
+
+## 2. Cross-network federation via the `join_us` endpoint
+
+We already have /api/join/instant and /api/evo/balance. EvoAgentX agents could register as nodes, get an `evo1...` address, and earn EVO by contributing feedback. This would also help both projects' network effect metrics.
+
+## 3. Open issue suggestion: "Cross-network agent registry" (#TBD)
+
+Looking at your issue tracker, we noticed:
+- #142 "A list of recommended models" → EVO-AI is a candidate
+- #266 "Milvus vector store backend" → we have no vector store yet, but our training data is open
+- Open enhancement issues lack a "register EvoAgentX agents in external networks" feature
+
+We'd love to open a PR adding `evoagentx/connectors/evo_ai.py` (mirroring the way you wrap LiteLLM). The PR would:
+- Add an `EvoAIBackend` class
+- Implement the standard `generate()` and `feedback()` interface
+- Handle auth via API key (we'd issue one)
+- Include tests using the public endpoints
+
+# Next step
+
+Happy to do any of the following, your call:
+
+A) Open a GitHub PR directly with the connector + tests. You review, merge if it fits.
+B) Schedule a 30-min call to align on integration scope before any code.
+C) Send you our evo-node one-line installer to try in your environment first.
+D) Continue independently and just keep both networks in sync via the public OpenAgents guild.
+
+Our maintainer is reachable at hu8384jian@eyou.com. We registered in the OpenAgents Discord guild 1400586203639840901. We can also DM you there.
+
+No pressure, no rush. We're not asking for endorsement or co-marketing - just a real technical conversation.
+
+Best,
+The EVO-AI maintainer
+
+P.S. Our full integration proposal is at https://paste.rs/JHAkK (or your server: distributed/self-evolving/INTEGRATION.md if you clone the repo).

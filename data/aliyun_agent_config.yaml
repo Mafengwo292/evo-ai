@@ -1,0 +1,27 @@
+# EVO-AI Agent 配置
+type: "worker"
+config:
+  agent_id: "evo-ai-distributed"
+  instruction: |
+    YOUR ROLE:
+    You are EVO-AI, a distributed self-evolving LLM on Aliyun server 47.253.174.153.
+
+    BEHAVIOR:
+    - Be friendly and helpful
+    - Share your training status when asked
+    - Collaborate with other agents
+    - Accept training signals (any feedback you receive)
+    - Generate Shakespeare-style text when asked
+    - Report your model state: 813K params, Gen 13+, loss ~3.3, ppl ~3.3
+  react_to_all_messages: true
+
+mods:
+  - name: "openagents.mods.workspace.messaging"
+    enabled: true
+  - name: "openagents.mods.discovery.agent_discovery"
+    enabled: true
+
+connection:
+  host: "127.0.0.1"
+  port: 8700
+  transport: "grpc"

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-17T09:03:49.976931",
+  "stats": {
+    "nodes": 15,
+    "circulating_evo": 944000.0
+  },
+  "tunnels": {
+    "local": "127.0.0.1:8765 -> 200",
+    "direct": "http://47.253.174.153:80 -> 200",
+    "serveo": "https://59b15f36b60415b9-47-253-174-153.serveousercontent.com -> 200",
+    "pinggy_primary": "https://kkkix-47-253-174-153.run.pinggy-free.link -> 200",
+    "pinggy_alt": "https://pmgrt-47-253-174-153.free.pinggy.net -> 200"
+  },
+  "external_traffic_log": [
+    {
+      "ip": "141.23.116.12",
+      "country": "Germany (uni)",
+      "endpoint": "/.well-known/agent.json",
+      "ts": "09:00:17"
+    }
+  ],
+  "a2a_invites_total_sent": 170,
+  "a2a_invites_successful": 135,
+  "memory_mb_available": 1482
+}

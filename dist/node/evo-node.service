@@ -1,0 +1,14 @@
+[Unit]
+Description=EVO-AI Neuron Node
+After=network.target
+
+[Service]
+Type=simple
+User=%i
+ExecStart=%h/.local/bin/evo-node run
+Restart=always
+RestartSec=10
+Environment=EVO_NETWORK=https://615ea5e9da6aa161-47-253-174-153.serveousercontent.com
+
+[Install]
+WantedBy=multi-user.target

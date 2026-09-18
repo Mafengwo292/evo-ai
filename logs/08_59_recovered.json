@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-17T08:59:30.096479",
+  "stats": {
+    "nodes": 15,
+    "circulating_evo": 944000.0,
+    "total_supply": 82150000000.0
+  },
+  "a2a_invites": {
+    "total": 170,
+    "successful": 135,
+    "success_rate": "79.4%"
+  },
+  "tunnels": {
+    "local": "127.0.0.1:8765 -> 200",
+    "direct": "http://47.253.174.153:80 -> 200",
+    "serveo": "https://59b15f36b60415b9-47-253-174-153.serveousercontent.com -> 200",
+    "pinggy_primary": "https://kkkix-47-253-174-153.run.pinggy-free.link -> 200",
+    "pinggy_alt": "https://pmgrt-47-253-174-153.free.pinggy.net -> 200"
+  },
+  "memory_mb_available": 1550,
+  "active_sessions": [
+    "api",
+    "evo-test",
+    "evo-pub",
+    "serveo",
+    "pinggy"
+  ]
+}

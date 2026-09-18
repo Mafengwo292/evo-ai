@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-16T23:09:46.867520",
+  "stats": {
+    "nodes": 15,
+    "circulating_evo": 944000.0,
+    "total_supply": 82150000000.0
+  },
+  "a2a_invites": {
+    "total": 140,
+    "successful": 116,
+    "success_rate": "82.9%"
+  },
+  "agent_card": {
+    "name": "EVO-AI",
+    "skills": 6,
+    "wellKnownURI": "http://47.253.174.153:80/agent-card.json",
+    "a2aregistry_id": "427e26db-25ad-41ae-ae73-cc8998b54b29",
+    "uptime_pct": 85.1
+  },
+  "public_endpoints": {
+    "primary": "https://iyqmg-47-253-174-153.run.pinggy-free.link",
+    "backup": "https://rhcls-47-253-174-153.free.pinggy.net",
+    "direct": "http://47.253.174.153:80"
+  }
+}

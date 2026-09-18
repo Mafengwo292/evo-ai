@@ -1,0 +1,18 @@
+[2026-09-18T08:41:17.319009] === self_drive cycle starting ===
+[2026-09-18T08:41:18.788866] State: nodes=15, fitness=0.009189134160613234, unique_ips=15, mem=571MB
+[2026-09-18T08:41:18.789307] Made 3 decisions: ['discover_agents', 'expand_a2a_v2', 'auto_announce']
+[2026-09-18T08:41:18.789414] Executing: discover_agents (reason: Only 15 unique IPs)
+[2026-09-18T08:41:30.550266]   -> OK
+[2026-09-18T08:41:35.555586] Executing: expand_a2a_v2 (reason: Continuous A2A outreach)
+[2026-09-18T08:42:35.372716]   -> OK
+[2026-09-18T08:42:40.395395] Executing: auto_announce (reason: Weekly announcement refresh)
+[2026-09-18T08:42:46.857347]   -> OK
+[2026-09-18T08:42:51.863994] Cycle complete. Actions: ['discover_agents', 'expand_a2a_v2', 'auto_announce']
+[2026-09-18T08:42:51.864227] === self_drive cycle done ===
+
+[2026-09-18T13:29:29.650373] === self_drive_safe cycle starting ===
+[2026-09-18T13:29:29.650727] Available memory: 1524MB
+[2026-09-18T13:29:29.661519] Running action: expand_a2a_v2
+[2026-09-18T13:30:10.364713]   -> OK
+[2026-09-18T13:30:10.364930] === self_drive_safe cycle done ===
+

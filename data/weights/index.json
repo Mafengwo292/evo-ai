@@ -1,0 +1,328 @@
+{
+  "entries": [
+    {
+      "weight_id": "gen0-ind000",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.645,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind000.pt",
+      "url": "",
+      "created_at": 1789265716.138165,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind001",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.5392,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind001.pt",
+      "url": "",
+      "created_at": 1789265716.4485269,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind002",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.7167,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind002.pt",
+      "url": "",
+      "created_at": 1789265716.7722497,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind003",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.5823,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind003.pt",
+      "url": "",
+      "created_at": 1789265717.083638,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind004",
+      "parent_id": "gen0-ind001",
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.5603,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind004.pt",
+      "url": "",
+      "created_at": 1789265717.395404,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind005",
+      "parent_id": "gen0-ind001",
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.6636,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind005.pt",
+      "url": "",
+      "created_at": 1789265717.6070204,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen1-ind006",
+      "parent_id": "gen0-ind001",
+      "generation": 1,
+      "metrics": {
+        "final_loss": 1.9198,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen1-ind006.pt",
+      "url": "",
+      "created_at": 1789265718.0606809,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen1-ind007",
+      "parent_id": "gen0-ind001",
+      "generation": 1,
+      "metrics": {
+        "final_loss": 1.6033,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen1-ind007.pt",
+      "url": "",
+      "created_at": 1789265718.272989,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen2-ind008",
+      "parent_id": "gen0-ind001",
+      "generation": 2,
+      "metrics": {
+        "final_loss": 1.7529,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen2-ind008.pt",
+      "url": "",
+      "created_at": 1789265718.6853487,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen2-ind009",
+      "parent_id": "gen0-ind001",
+      "generation": 2,
+      "metrics": {
+        "final_loss": 1.5753,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen2-ind009.pt",
+      "url": "",
+      "created_at": 1789265718.9590566,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind010",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.7773,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind010.pt",
+      "url": "",
+      "created_at": 1789266023.7586176,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind011",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.6483,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind011.pt",
+      "url": "",
+      "created_at": 1789266024.0736568,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind012",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.8986,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind012.pt",
+      "url": "",
+      "created_at": 1789266024.390789,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind013",
+      "parent_id": null,
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.5104,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind013.pt",
+      "url": "",
+      "created_at": 1789266024.703036,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind014",
+      "parent_id": "gen0-ind013",
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.9707,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind014.pt",
+      "url": "",
+      "created_at": 1789266025.0150812,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen0-ind015",
+      "parent_id": "gen0-ind013",
+      "generation": 0,
+      "metrics": {
+        "final_loss": 1.5469,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen0-ind015.pt",
+      "url": "",
+      "created_at": 1789266025.227603,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen1-ind016",
+      "parent_id": "gen0-ind013",
+      "generation": 1,
+      "metrics": {
+        "final_loss": 1.9552,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen1-ind016.pt",
+      "url": "",
+      "created_at": 1789266025.6400042,
+      "tags": [
+        "modal-mock"
+      ]
+    },
+    {
+      "weight_id": "gen1-ind017",
+      "parent_id": "gen0-ind013",
+      "generation": 1,
+      "metrics": {
+        "final_loss": 1.9937,
+        "steps": 500,
+        "gpu": "A10G-mock",
+        "region": "modal-cloud-mock",
+        "cost_usd": 0.025
+      },
+      "weight_path": "data/weights/gen1-ind017.pt",
+      "url": "",
+      "created_at": 1789266025.852552,
+      "tags": [
+        "modal-mock"
+      ]
+    }
+  ]
+}

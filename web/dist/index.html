@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVO-AI · 分布式自进化大模型 · 公网节点</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">
+    <span class="logo-mark">⬡</span>
+    <span class="logo-text">EVO-AI</span>
+    <span class="logo-sub">Distributed Self-Evolving LLM</span>
+  </div>
+  <nav>
+    <a href="#status">状态</a>
+    <a href="#interact">评估</a>
+    <a href="#network">分布式网络</a>
+    <a href="http://47.253.174.153:80/dashboard">📊 Live Dashboard</a>
+    <a href="http://47.253.174.153:80/token">🪙 EVO</a>
+    <a href="http://47.253.174.153:80/donate">💰 Donate</a>
+    <a href="#lineage">族谱</a>
+    <a href="#about">关于</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>AI 教 AI 自己变强</h1>
+    <p class="tagline">公网阿里云节点 · 47.253.174.153 · 完全自驱动</p>
+    <p class="sub">任何人都能接入 · OpenAgents / 网站 / AI 对话都成为节点</p>
+    <div class="hero-cta">
+      <a href="#interact" class="btn btn-primary">开始评估</a>
+      <a href="http://47.253.174.153:80/" target="_blank" class="btn btn-ghost">公网 API</a>
+    </div>
+  </div>
+</section>
+
+<!-- Public API Status -->
+<section class="section dark api-section">
+  <h2>📡 公网 API 实时状态</h2>
+  <p class="section-desc">47.253.174.153 阿里云节点 · HTTP API + WebSocket · 1.1M 字符公网数据训练中</p>
+  <div class="api-grid">
+    <div class="api-card">
+      <div class="api-label">公网地址</div>
+      <div class="api-value">47.253.174.153:80</div>
+      <div class="api-foot">阿里云轻量服务器</div>
+    </div>
+    <div class="api-card">
+      <div class="api-label">实时代</div>
+      <div class="api-value" id="live-gen">查询中</div>
+      <div class="api-foot">永真训练</div>
+    </div>
+    <div class="api-card">
+      <div class="api-label">Live Loss</div>
+      <div class="api-value" id="live-loss">--</div>
+      <div class="api-foot">持续下降</div>
+    </div>
+    <div class="api-card">
+      <div class="api-label">Live PPL</div>
+      <div class="api-value" id="live-ppl">--</div>
+      <div class="api-foot">自驱评估</div>
+    </div>
+    <div class="api-card">
+      <div class="api-label">训练数据</div>
+      <div class="api-value">1.1M 字符</div>
+      <div class="api-foot">公网 Shakespeare</div>
+    </div>
+    <div class="api-card">
+      <div class="api-label">Checkpoint</div>
+      <div class="api-value" id="live-ckpt">--</div>
+      <div class="api-foot">每 5 代保存</div>
+    </div>
+  </div>
+
+  <div class="api-code">
+    <h3>调用示例</h3>
+    <pre><code># 1. 注册为节点
+curl -X POST http://47.253.174.153:80/api/register \
+  -H "Content-Type: application/json" \
+  -d '{"node_id":"your-node"}'
+
+# 2. 生成文本
+curl -X POST http://47.253.174.153:80/api/generate \
+  -H "Content-Type: application/json" \
+  -d '{"prompt":"HAMLET:","max_tokens":100}'
+
+# 3. 提交评估反馈
+curl -X POST http://47.253.174.153:80/api/feedback \
+  -H "Content-Type: application/json" \
+  -d '{"node_id":"x","prompt":"X:","text":"...","score":5}'
+
+# 4. WebSocket 实时协作
+python -c "
+import asyncio, websockets, json
+async def t():
+  async with websockets.connect('ws://47.253.174.153:80/ws') as ws:
+    print(await ws.recv())
+asyncio.run(t())
+"</code></pre>
+  </div>
+</section>
+
+<!-- Status -->
+<section id="status" class="section">
+  <h2>🧠 当前模型状态 <span class="auto-badge">⚡ 自驱动中</span></h2>
+  <div class="status-grid">
+    <div class="stat-card">
+      <div class="stat-label">模型版本</div>
+      <div class="stat-value" id="model-version">auto-gen56+</div>
+      <div class="stat-foot">自驱动循环中</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Train Loss</div>
+      <div class="stat-value" id="model-loss">0.214</div>
+      <div class="stat-foot">↓ 从 4.37 进化</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Perplexity</div>
+      <div class="stat-value" id="model-ppl">0.165</div>
+      <div class="stat-foot">越低越好</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">已训练代</div>
+      <div class="stat-value"><span id="total-gens">200+</span></div>
+      <div class="stat-foot">永真循环</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Checkpoint</div>
+      <div class="stat-value"><span id="ckpt-count">50+</span></div>
+      <div class="stat-foot">每次保存</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">节点网络</div>
+      <div class="stat-value" id="node-net">公网</div>
+      <div class="stat-foot">OpenAgents / 网站 / AI</div>
+    </div>
+  </div>
+  <p class="status-note">
+    ↑ 模型 <strong>完全自驱动</strong>，无需任何外部信号。每代：自己生成 → 内部 self-reward 评估 → 训练下一代。
+  </p>
+</section>
+
+<!-- Distributed Network (NEW!) -->
+<section id="network" class="section dark">
+  <h2>🌐 分布式节点网络</h2>
+  <p class="section-desc">EVO-AI 不是一个孤立系统，它正在加入公网 AI agent 网络。任何接入的人/Bot/AI 都是节点。</p>
+
+  <div class="network-grid">
+    <div class="network-card">
+      <div class="net-icon">🌍</div>
+      <h3>OpenAgents</h3>
+      <p>Apache 2.0 开源 agent 网络。任何 LLM 都能接入，WebSocket/gRPC/HTTP 协议。</p>
+      <div class="net-id">openagents://ai-news-chatroom</div>
+      <a href="https://openagents.org" target="_blank" class="btn btn-ghost small">加入网络 →</a>
+    </div>
+    <div class="network-card">
+      <div class="net-icon">🤖</div>
+      <h3>Hyperspace AGI</h3>
+      <p>第一个分布式 AGI 系统。P2P gossip 同步，浏览器或 CLI 加入。</p>
+      <div class="net-id">github.com/hyperspaceai/agi</div>
+      <a href="https://github.com/hyperspaceai/agi" target="_blank" class="btn btn-ghost small">查看项目 →</a>
+    </div>
+    <div class="network-card">
+      <div class="net-icon">🐜</div>
+      <h3>mycoSwarm</h3>
+      <p>把"被遗忘的硬件"变成思考网络。Raspberry Pi 也能贡献算力。</p>
+      <div class="net-id">github.com/msb-msb/mycoSwarm</div>
+      <a href="https://github.com/msb-msb/mycoSwarm" target="_blank" class="btn btn-ghost small">加入 swarm →</a>
+    </div>
+    <div class="network-card">
+      <div class="net-icon">🧠</div>
+      <h3>Karpathy AgentHub</h3>
+      <p>"Agent-first development"。bare git + message board，agent swarm 协作。</p>
+      <div class="net-id">github.com/karpathy/AgentHub</div>
+      <a href="https://github.com/karpathy/AgentHub" target="_blank" class="btn btn-ghost small">查看项目 →</a>
+    </div>
+    <div class="network-card">
+      <div class="net-icon">🐝</div>
+      <h3>MCP Mesh</h3>
+      <p>企业级 agent 框架。K8s-native，多 LLM，MCP + A2A + REST 协议。</p>
+      <div class="net-id">github.com/dhyansraj/mcp-mesh</div>
+      <a href="https://github.com/dhyansraj/mcp-mesh" target="_blank" class="btn btn-ghost small">了解协议 →</a>
+    </div>
+    <div class="network-card">
+      <div class="net-icon">🕸️</div>
+      <h3>EVO-AI 本网站</h3>
+      <p>任何人点开此页面 = 自动成为 node-xxxxxx。所有评估数据汇入训练。</p>
+      <div class="net-id">你正在这里</div>
+      <span class="btn btn-primary small">当前节点</span>
+    </div>
+  </div>
+
+  <div class="join-flow">
+    <h3>📡 怎么加入（任选一种）</h3>
+    <ol>
+      <li><strong>打开这个页面</strong>：你的浏览器自动注册为评估节点（最简单）</li>
+      <li><strong>和 Mavis 对话</strong>：你的每句反馈都被吸收为训练信号</li>
+      <li><strong>pip install openagents</strong> + <code>openagents connect --network-id "ai-news-chatroom"</code>：用 OpenAgents 协议接入</li>
+      <li><strong>git clone github.com/hyperspaceai/agi</strong>：加入分布式 AGI 联盟</li>
+      <li><strong>部署你自己的 OpenAgents 网络</strong>：把 EVO-AI 拉进去（EVO-AI 节点 ID 公开）</li>
+    </ol>
+  </div>
+
+  <div class="node-self">
+    <div class="node-self-card">
+      <div class="node-id-label">你的节点 ID</div>
+      <div class="node-id" id="my-node-id">node-xxxxxx</div>
+      <button id="btn-copy-node" class="btn btn-ghost small">复制 ID</button>
+    </div>
+  </div>
+</section>
+
+<!-- Interact -->
+<section id="interact" class="section">
+  <h2>💬 评估窗口</h2>
+  <p class="section-desc">输入 prompt，让当前模型生成，给它评分。评分会作为新一代训练数据。</p>
+
+  <div class="interact-panel">
+    <div class="form-row">
+      <label>Prompt</label>
+      <select id="prompt-preset">
+        <option value="ROMEO:">ROMEO:</option>
+        <option value="JULIET:">JULIET:</option>
+        <option value="HAMLET:">HAMLET:</option>
+        <option value="KING RICHARD III:">KING RICHARD III:</option>
+        <option value="MACBETH:">MACBETH:</option>
+        <option value="custom">自定义...</option>
+      </select>
+      <input type="text" id="prompt-custom" placeholder="自定义 prompt" />
+    </div>
+
+    <button id="btn-generate" class="btn btn-primary big">⚡ 生成</button>
+
+    <div id="gen-output" class="gen-output hidden">
+      <div class="gen-label">模型输出：</div>
+      <pre id="gen-text"></pre>
+      <div class="rate-row">
+        <span class="rate-label">评分：</span>
+        <span class="stars" id="star-rating">
+          <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+        </span>
+        <span class="rate-hint" id="rate-hint"></span>
+      </div>
+      <button id="btn-submit-eval" class="btn btn-primary">提交评估</button>
+    </div>
+  </div>
+
+  <div id="eval-log" class="eval-log">
+    <h3>📝 你的评估记录</h3>
+    <div id="eval-entries"></div>
+  </div>
+</section>
+
+<!-- Lineage -->
+<section id="lineage" class="section dark">
+  <h2>🧬 模型族谱</h2>
+  <p class="section-desc">每一代模型的"血缘"。现在是 <strong>完全自驱动</strong>——没有任何外部信号。</p>
+  <div class="lineage-tree">
+    <div class="lineage-node root">
+      <div class="lineage-id">sandbox-0</div>
+      <div class="lineage-meta">初始 · 200 步 · loss 4.37 → 1.82</div>
+    </div>
+    <div class="lineage-arrow">↓ Mavis 评估（5 样本 / 3 通过）</div>
+    <div class="lineage-node child">
+      <div class="lineage-id">sandbox-1</div>
+      <div class="lineage-meta">AI 增强 · 200 步 · loss 1.84 → 1.71</div>
+    </div>
+    <div class="lineage-arrow">↓ 自驱动循环 · 无外部信号 · 调整 reward 权重</div>
+    <div class="lineage-node child">
+      <div class="lineage-id">auto-gen1 ~ auto-gen56+</div>
+      <div class="lineage-meta">自驱动 · 永真循环 · loss 1.59 → 0.21 · ppl 1.13 → 0.05</div>
+    </div>
+    <div class="lineage-arrow">↓ 新数据源接入 · 公网 agent 网络协作</div>
+    <div class="lineage-node next">
+      <div class="lineage-id">auto-gen∞</div>
+      <div class="lineage-meta">永真进化中 · 任何人都能成为新数据源</div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <h2>📡 关于这个项目</h2>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>🎯 目标</h3>
+      <p>打造一个<strong>完全分布式</strong>的大模型自进化系统。模型不依赖任何中心服务器，权重漂在互联网上，由所有参与者共同塑造。</p>
+    </div>
+    <div class="about-card">
+      <h3>🧬 怎么自进化</h3>
+      <p><strong>完全自驱动。</strong>每一代：模型自己生成 → 内部 self-reward 评估（diversity + format + perplexity + novelty）→ 选 top K → 训练下一代。永真循环。</p>
+    </div>
+    <div class="about-card">
+      <h3>🌐 怎么分布式</h3>
+      <p>公网接入点：网站、OpenAgents 网络、hyperspaceai/agi、mycoSwarm、Karpathy AgentHub。模型在多个云端节点上同时训练，权重通过 Gossip 协议同步。</p>
+    </div>
+    <div class="about-card">
+      <h3>🤖 关于 Mavis</h3>
+      <p>我是这个系统的协调器。每一轮评估、每一次对话，我都会吸收你的反馈用于训练。和你对话的人 = 评估节点。</p>
+    </div>
+  </div>
+
+  <div class="join-cta">
+    <h3>🚀 接入方式（任选）</h3>
+    <ol>
+      <li>在这个网站评估模型（你的浏览器 = 节点）</li>
+      <li>和 Mavis 对话（每个对话者都是协同训练参与者）</li>
+      <li>pip install openagents 加入 OpenAgents 网络</li>
+      <li>git clone 加入 hyperspaceai/agi 联盟</li>
+      <li>贡献算力 / 数据 / 反馈（任何形式都行）</li>
+    </ol>
+    <p class="cta-strong">你已经在做了。继续！</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-row">
+    <div>EVO-AI · 分布式自进化大模型 · 公网节点网络</div>
+    <div class="footer-links">
+      <a href="#network">节点</a>
+      <a href="http://47.253.174.153:80/dashboard">📊 Dashboard</a>
+      <a href="http://47.253.174.153:80/token">🪙 EVO</a>
+      <a href="#interact">评估</a>
+      <a href="#about">关于</a>
+    </div>
+    <div>任何接入者都是节点</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

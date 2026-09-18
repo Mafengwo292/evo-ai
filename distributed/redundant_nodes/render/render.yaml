@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: evo-ai-redundant
+    env: python
+    buildCommand: pip install flask flask-cors requests
+    startCommand: python light_api.py
+    envVars:
+      - key: PORT
+        value: 10000
+    autoDeploy: true

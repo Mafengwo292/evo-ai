@@ -1,0 +1,363 @@
+
+[t+0s / 1800s] 2026-09-13T02:41:09+00:00
+  Generation:        8
+  Model version:     auto-gen8
+  Global step:       8
+  Params:            59127
+  Train loss (last): 1.3323
+  Test PPL (last):   0.8521
+  Avg score (last):  0.6571
+  Buffer size:       312
+  History length:    8
+  Last gen elapsed:  4.57s
+
+[t+61s / 1800s] 2026-09-13T02:42:10+00:00
+  Generation:        10
+  Model version:     auto-gen10
+  Global step:       10
+  Params:            59127
+  Train loss (last): 1.2652
+  Test PPL (last):   0.7785
+  Avg score (last):  0.6621
+  Buffer size:       390
+  History length:    10
+  Last gen elapsed:  5.37s
+
+[t+121s / 1800s] 2026-09-13T02:43:10+00:00
+  Generation:        15
+  Model version:     auto-gen15
+  Global step:       15
+  Params:            59127
+  Train loss (last): 1.1154
+  Test PPL (last):   0.7265
+  Avg score (last):  0.6507
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.17s
+
+[t+182s / 1800s] 2026-09-13T02:44:11+00:00
+  Generation:        20
+  Model version:     auto-gen20
+  Global step:       20
+  Params:            59127
+  Train loss (last): 0.9803
+  Test PPL (last):   0.638
+  Avg score (last):  0.6618
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.96s
+
+[t+243s / 1800s] 2026-09-13T02:45:12+00:00
+  Generation:        25
+  Model version:     auto-gen25
+  Global step:       25
+  Params:            59127
+  Train loss (last): 0.8357
+  Test PPL (last):   0.6225
+  Avg score (last):  0.6674
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.04s
+
+[t+303s / 1800s] 2026-09-13T02:46:13+00:00
+  Generation:        30
+  Model version:     auto-gen30
+  Global step:       30
+  Params:            59127
+  Train loss (last): 0.7461
+  Test PPL (last):   0.4995
+  Avg score (last):  0.6719
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.9s
+
+[t+364s / 1800s] 2026-09-13T02:47:13+00:00
+  Generation:        40
+  Model version:     auto-gen40
+  Global step:       40
+  Params:            59127
+  Train loss (last): 0.5883
+  Test PPL (last):   0.3531
+  Avg score (last):  0.6755
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.73s
+
+[t+425s / 1800s] 2026-09-13T02:48:14+00:00
+  Generation:        45
+  Model version:     auto-gen45
+  Global step:       45
+  Params:            59127
+  Train loss (last): 0.5127
+  Test PPL (last):   0.2959
+  Avg score (last):  0.6778
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.09s
+
+[t+485s / 1800s] 2026-09-13T02:49:14+00:00
+  Generation:        50
+  Model version:     auto-gen50
+  Global step:       50
+  Params:            59127
+  Train loss (last): 0.4926
+  Test PPL (last):   0.39
+  Avg score (last):  0.6806
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.4s
+
+[t+545s / 1800s] 2026-09-13T02:50:14+00:00
+  Generation:        55
+  Model version:     auto-gen55
+  Global step:       55
+  Params:            59127
+  Train loss (last): 0.4668
+  Test PPL (last):   0.2493
+  Avg score (last):  0.6713
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.39s
+
+[t+605s / 1800s] 2026-09-13T02:51:14+00:00
+  Generation:        60
+  Model version:     auto-gen60
+  Global step:       60
+  Params:            59127
+  Train loss (last): 0.3838
+  Test PPL (last):   0.2604
+  Avg score (last):  0.6747
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.98s
+
+[t+666s / 1800s] 2026-09-13T02:52:15+00:00
+  Generation:        70
+  Model version:     auto-gen70
+  Global step:       70
+  Params:            59127
+  Train loss (last): 0.3679
+  Test PPL (last):   0.2372
+  Avg score (last):  0.6668
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.37s
+
+[t+726s / 1800s] 2026-09-13T02:53:15+00:00
+  Generation:        75
+  Model version:     auto-gen75
+  Global step:       75
+  Params:            59127
+  Train loss (last): 0.3285
+  Test PPL (last):   0.1793
+  Avg score (last):  0.666
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.86s
+
+[t+786s / 1800s] 2026-09-13T02:54:15+00:00
+  Generation:        80
+  Model version:     auto-gen80
+  Global step:       80
+  Params:            59127
+  Train loss (last): 0.325
+  Test PPL (last):   0.1143
+  Avg score (last):  0.6678
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.77s
+
+[t+846s / 1800s] 2026-09-13T02:55:15+00:00
+  Generation:        85
+  Model version:     auto-gen85
+  Global step:       85
+  Params:            59127
+  Train loss (last): 0.3109
+  Test PPL (last):   0.1157
+  Avg score (last):  0.667
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.88s
+
+[t+906s / 1800s] 2026-09-13T02:56:15+00:00
+  Generation:        90
+  Model version:     auto-gen90
+  Global step:       90
+  Params:            59127
+  Train loss (last): 0.2782
+  Test PPL (last):   0.1415
+  Avg score (last):  0.6554
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.72s
+
+[t+966s / 1800s] 2026-09-13T02:57:15+00:00
+  Generation:        100
+  Model version:     auto-gen100
+  Global step:       100
+  Params:            59127
+  Train loss (last): 0.279
+  Test PPL (last):   0.1509
+  Avg score (last):  0.6484
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.24s
+
+[t+1026s / 1800s] 2026-09-13T02:58:15+00:00
+  Generation:        105
+  Model version:     auto-gen105
+  Global step:       105
+  Params:            59127
+  Train loss (last): 0.2688
+  Test PPL (last):   0.1113
+  Avg score (last):  0.6541
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.07s
+
+[t+1086s / 1800s] 2026-09-13T02:59:15+00:00
+  Generation:        110
+  Model version:     auto-gen110
+  Global step:       110
+  Params:            59127
+  Train loss (last): 0.2626
+  Test PPL (last):   0.1079
+  Avg score (last):  0.6496
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.13s
+
+[t+1146s / 1800s] 2026-09-13T03:00:16+00:00
+  Generation:        115
+  Model version:     auto-gen115
+  Global step:       115
+  Params:            59127
+  Train loss (last): 0.2597
+  Test PPL (last):   0.1763
+  Avg score (last):  0.646
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.84s
+
+[t+1207s / 1800s] 2026-09-13T03:01:16+00:00
+  Generation:        120
+  Model version:     auto-gen120
+  Global step:       120
+  Params:            59127
+  Train loss (last): 0.2613
+  Test PPL (last):   0.1429
+  Avg score (last):  0.6414
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.13s
+
+[t+1267s / 1800s] 2026-09-13T03:02:16+00:00
+  Generation:        125
+  Model version:     auto-gen125
+  Global step:       125
+  Params:            59127
+  Train loss (last): 0.258
+  Test PPL (last):   0.0672
+  Avg score (last):  0.6331
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.27s
+
+[t+1328s / 1800s] 2026-09-13T03:03:17+00:00
+  Generation:        135
+  Model version:     auto-gen135
+  Global step:       135
+  Params:            59127
+  Train loss (last): 0.2498
+  Test PPL (last):   0.0974
+  Avg score (last):  0.6392
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.1s
+
+[t+1389s / 1800s] 2026-09-13T03:04:18+00:00
+  Generation:        140
+  Model version:     auto-gen140
+  Global step:       140
+  Params:            59127
+  Train loss (last): 0.2326
+  Test PPL (last):   0.0962
+  Avg score (last):  0.6254
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.89s
+
+[t+1449s / 1800s] 2026-09-13T03:05:18+00:00
+  Generation:        145
+  Model version:     auto-gen145
+  Global step:       145
+  Params:            59127
+  Train loss (last): 0.2412
+  Test PPL (last):   0.1152
+  Avg score (last):  0.6351
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.38s
+
+[t+1510s / 1800s] 2026-09-13T03:06:19+00:00
+  Generation:        150
+  Model version:     auto-gen150
+  Global step:       150
+  Params:            59127
+  Train loss (last): 0.2413
+  Test PPL (last):   0.0711
+  Avg score (last):  0.6149
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.2s
+
+[t+1571s / 1800s] 2026-09-13T03:07:20+00:00
+  Generation:        155
+  Model version:     auto-gen155
+  Global step:       155
+  Params:            59127
+  Train loss (last): 0.2269
+  Test PPL (last):   0.1718
+  Avg score (last):  0.6093
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.45s
+
+[t+1631s / 1800s] 2026-09-13T03:08:20+00:00
+  Generation:        165
+  Model version:     auto-gen165
+  Global step:       165
+  Params:            59127
+  Train loss (last): 0.2344
+  Test PPL (last):   0.1612
+  Avg score (last):  0.6145
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.48s
+
+[t+1692s / 1800s] 2026-09-13T03:09:21+00:00
+  Generation:        170
+  Model version:     auto-gen170
+  Global step:       170
+  Params:            59127
+  Train loss (last): 0.2325
+  Test PPL (last):   0.1375
+  Avg score (last):  0.6223
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  4.74s
+
+[t+1752s / 1800s] 2026-09-13T03:10:22+00:00
+  Generation:        175
+  Model version:     auto-gen175
+  Global step:       175
+  Params:            59127
+  Train loss (last): 0.2213
+  Test PPL (last):   0.1133
+  Avg score (last):  0.6326
+  Buffer size:       500
+  History length:    10
+  Last gen elapsed:  5.23s
+
+=== 30 minutes reached at 2026-09-13T03:11:22+00:00 — stopping auto_evo ===
+=== Monitor finished ===

@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-09-16T21:07:49.445719",
+  "network_stats": {
+    "accounts": 50,
+    "allocation": {
+      "api_compute": 20537500000.0,
+      "liquidity_pool": 2464500000.0,
+      "node_rewards": 28752500000.0,
+      "public_distribution": 16430000000.0,
+      "reserve": 8215000000.0,
+      "team_advisors": 5750500000.000001
+    },
+    "blocks": 1,
+    "burn_rate": 0.001,
+    "burned": 0.0,
+    "circulating": 944192.0,
+    "config": {
+      "block_time_seconds": 3600,
+      "decimals": 8,
+      "genesis_time": "2026-09-14T00:00:00Z",
+      "halving_interval_years": 4,
+      "max_years": 10,
+      "name": "EVO",
+      "smallest_unit": 1e-08,
+      "symbol": "EVO",
+      "total_supply": 8215000000000000000
+    },
+    "donation_rate_cny_to_evo": 12750.0,
+    "minted": 944192.0,
+    "name": "EVO",
+    "nodes": 15,
+    "symbol": "EVO",
+    "total_node_rewards": 44192.0,
+    "total_supply": 8215000000000000000,
+    "total_supply_evo": 82150000000.0
+  },
+  "dist_recent": [
+    {
+      "ts": "2026-09-16T21:05:24.906832",
+      "hashes": {
+        "evo-node": "2627b3d8480b",
+        "install.sh": "891f5c8b1d6c",
+        "evo-node.service": "4e3216b4ba57",
+        "docs": "7907115374bc"
+      },
+      "urls": {
+        "evo-node": "https://paste.rs/fGfIR",
+        "install.sh": "https://paste.rs/ES2GH",
+        "evo-node.service": "https://paste.rs/XRYsP",
+        "docs": "https://paste.rs/iwquz"
+      }
+    },
+    {
+      "ts": "2026-09-16T21:06:29.909474",
+      "hashes": {
+        "evo-node": "2627b3d8480b",
+        "install.sh": "891f5c8b1d6c",
+        "evo-node.service": "4e3216b4ba57",
+        "docs": "7907115374bc"
+      },
+      "urls": {
+        "evo-node": "https://paste.rs/fCGmx",
+        "install.sh": "https://paste.rs/N0WHc",
+        "evo-node.service": "https://paste.rs/J6aki",
+        "docs": "https://paste.rs/VjGXy"
+      }
+    },
+    {
+      "ts": "2026-09-16T21:07:43.407603",
+      "hashes": {
+        "evo-node": "d2b5184406b3",
+        "install.sh": "891f5c8b1d6c",
+        "evo-node.service": "4e3216b4ba57",
+        "docs": "7907115374bc"
+      },
+      "urls": {
+        "evo-node": "https://paste.rs/SN098",
+        "install.sh": "https://paste.rs/WHbEY",
+        "evo-node.service": "https://paste.rs/3RrlE",
+        "docs": "https://paste.rs/25zIh"
+      }
+    }
+  ],
+  "evo_test_log_tail": [
+    "[HB #20] 12:58:53 +100 EVO (total: 2000)",
+    "[HB #21] 12:59:53 +100 EVO (total: 2100)",
+    "[HB #1] 14:57:19 +100 EVO (total: 100)",
+    "[HB #1] 21:06:35 +100 EVO (total: 100)",
+    "[HB #2] 21:07:36 +100 EVO (total: 200)"
+  ],
+  "watchdog_recent": [
+    "[2026-09-16 21:05:02] Watchdog check...",
+    "[2026-09-16 21:05:02] API DOWN, restarting...",
+    "[2026-09-16 21:05:02] API restarted",
+    "[2026-09-16 21:05:02] serveo DOWN (502), restarting...",
+    "[2026-09-16 21:05:02] Done"
+  ]
+}

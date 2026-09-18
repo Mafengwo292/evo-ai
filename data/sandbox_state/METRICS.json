@@ -1,0 +1,11 @@
+{
+  "last_check": {
+    "timestamp": "2026-09-18T05:21:11.817089+00:00",
+    "api_status": 503,
+    "api_alive": false,
+    "ssh_alive": false
+  },
+  "server_alive": false,
+  "paste_rs_active": 14,
+  "paste_rs_total": 14
+}

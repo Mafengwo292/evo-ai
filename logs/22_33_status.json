@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-09-16T22:33:40.799339",
+  "stats": {
+    "accounts": 0,
+    "allocation": {
+      "api_compute": 20537500000.0,
+      "liquidity_pool": 2464500000.0,
+      "node_rewards": 28752500000.0,
+      "public_distribution": 16430000000.0,
+      "reserve": 8215000000.0,
+      "team_advisors": 5750500000.0
+    },
+    "blocks": 1,
+    "burn_rate": 0.001,
+    "burned": 0.0,
+    "circulating": 944000.0,
+    "config": {
+      "block_time_seconds": 3600,
+      "decimals": 8,
+      "genesis_time": "2026-09-14T00:00:00Z",
+      "halving_interval_years": 4,
+      "max_years": 10,
+      "name": "EVO",
+      "smallest_unit": 1e-08,
+      "symbol": "EVO",
+      "total_supply": 82150000000
+    },
+    "donation_rate_cny_to_evo": 12750.0,
+    "minted": 944000.0,
+    "name": "EVO",
+    "nodes": 16,
+    "symbol": "EVO",
+    "total_supply": 82150000000.0
+  },
+  "nodes_count": 16,
+  "recent_activity": [],
+  "invites": [
+    {
+      "file": "a2a_real_invites.json",
+      "results": 50
+    },
+    {
+      "file": "agentmarket_invites.json",
+      "results": 0
+    },
+    {
+      "file": "mass_a2a_invites.json",
+      "results": 50
+    }
+  ]
+}

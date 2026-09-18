@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-09-17T09:01:35.622782",
+  "hits": [
+    {
+      "name": "A2A Registry",
+      "url": "https://a2aregistry.org/api/agents",
+      "count": 50,
+      "status": 200
+    }
+  ]
+}

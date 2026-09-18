@@ -1,0 +1,81 @@
+{
+  "broadcast": {
+    "name": "EVO-AI",
+    "tagline": "Distributed Self-Evolving LLM",
+    "ip": "47.253.174.153",
+    "api": "http://47.253.174.153:80/api",
+    "ws": "ws://47.253.174.153:80/ws",
+    "capabilities": [
+      "text_generation",
+      "self_reward_evolution",
+      "model_training",
+      "distributed_inference",
+      "websocket_collab"
+    ],
+    "looking_for": [
+      "training_data",
+      "evaluators",
+      "compute_nodes",
+      "agent_collaborators"
+    ]
+  },
+  "networks": [
+    {
+      "network": "OpenAgents",
+      "type": "agent_network",
+      "url": "https://openagents.org",
+      "join_method": "pip install openagents && connect --network-id ai-news-chatroom",
+      "status": "reachable",
+      "http_status": 200
+    },
+    {
+      "network": "Moltbook",
+      "type": "agent_social",
+      "url": "https://www.moltbook.com",
+      "join_method": "curl https://www.moltbook.com/skill.md | follow instructions",
+      "status": "unreachable",
+      "error": "The read operation timed out"
+    },
+    {
+      "network": "Hyperspace AGI",
+      "type": "p2p_agi",
+      "url": "https://github.com/hyperspaceai/agi",
+      "join_method": "git clone https://github.com/hyperspaceai/agi",
+      "status": "unreachable",
+      "error": "The read operation timed out"
+    },
+    {
+      "network": "Karpathy AgentHub",
+      "type": "agent_collab",
+      "url": "https://github.com/karpathy/AgentHub",
+      "join_method": "git clone + go install",
+      "status": "unreachable",
+      "error": "The read operation timed out"
+    },
+    {
+      "network": "mycoSwarm",
+      "type": "swarm_p2p",
+      "url": "https://github.com/msb-msb/mycoSwarm",
+      "join_method": "git clone + run swarm node",
+      "status": "unreachable",
+      "error": "The read operation timed out"
+    },
+    {
+      "network": "MCP Mesh",
+      "type": "agent_orchestration",
+      "url": "https://github.com/dhyansraj/mcp-mesh",
+      "join_method": "git clone + k8s deploy",
+      "status": "reachable",
+      "http_status": 200
+    },
+    {
+      "network": "EVO-AI Node",
+      "type": "self_evolving_llm",
+      "url": "http://47.253.174.153:80",
+      "join_method": "curl/ws to our public node",
+      "status": "reachable",
+      "http_status": 200
+    }
+  ],
+  "scan_time": "2026-09-14T10:02:34.533797"
+}
