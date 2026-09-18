@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EVO-AI · Distributed Self-Evolving Language Model</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Distributed self-evolving language model network. 813K-param model evolving via (1+lambda)-ES across volunteer nodes. Public API + A2A JSON-RPC 2.0.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, system-ui, sans-serif; background: #0a0e1a; color: #d8e2ff; line-height: 1.7; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 60px 30px; }
+  h1 { font-size: 48px; font-weight: 700; background: linear-gradient(90deg, #6bd9ff, #c97bff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  h2 { font-size: 28px; margin-top: 60px; color: #6bd9ff; }
+  h3 { font-size: 20px; margin-top: 30px; color: #c97bff; }
+  p, li { font-size: 16px; margin: 10px 0; }
+  code { background: #1a2138; padding: 2px 8px; border-radius: 4px; font-family: 'SF Mono', Consolas, monospace; color: #c97bff; font-size: 14px; }
+  pre { background: #1a2138; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+  pre code { background: none; padding: 0; }
+  .badges { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0; }
+  .badge { padding: 6px 14px; border-radius: 20px; font-size: 14px; background: #1a2138; border: 1px solid #2a3550; }
+  .badge.green { background: #0e3a2a; border-color: #2a8b5a; color: #7fffaf; }
+  .badge.purple { background: #2a1a4a; border-color: #6b3aff; color: #c97bff; }
+  .badge.cyan { background: #0a2a3a; border-color: #2a8b9b; color: #6bd9ff; }
+  .links a { display: inline-block; margin: 5px 10px 5px 0; color: #6bd9ff; text-decoration: none; padding: 8px 16px; border: 1px solid #2a3550; border-radius: 6px; }
+  .links a:hover { background: #1a2138; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 30px 0; }
+  .metric { background: #1a2138; padding: 20px; border-radius: 8px; border: 1px solid #2a3550; }
+  .metric .num { font-size: 32px; font-weight: 700; color: #6bd9ff; }
+  .metric .label { font-size: 12px; color: #8b9bc4; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+  footer { margin-top: 80px; padding-top: 30px; border-top: 1px solid #2a3550; font-size: 14px; color: #8b9bc4; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>EVO-AI</h1>
+<p>A truly open, distributed, self-evolving language model. Anyone can run a node. Anyone can query the API. The model itself evolves.</p>
+
+<div class="badges">
+  <span class="badge green">● LIVE</span>
+  <span class="badge purple">A2A Compatible</span>
+  <span class="badge cyan">MIT License</span>
+  <span class="badge">813K params</span>
+  <span class="badge">(1+λ)-ES</span>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="num">15</div><div class="label">Active Nodes</div></div>
+  <div class="metric"><div class="num">944K</div><div class="label">EVO Circulating</div></div>
+  <div class="metric"><div class="num">684</div><div class="label">Files on GitHub</div></div>
+  <div class="metric"><div class="num">PR #283</div><div class="label">EvoAgentX</div></div>
+</div>
+
+<h2>What is it?</h2>
+<p>EVO-AI is a small language model (813,000 parameters) that lives across the public internet. The model weights themselves evolve via <code>(1+λ)-ES</code> evolutionary strategy — not just prompts, but actual weight updates — across volunteer nodes.</p>
+
+<h3>Why it matters</h3>
+<ul>
+  <li><strong>No signup, no captcha, no API key.</strong> Just call the public HTTP API.</li>
+  <li><strong>Truly open.</strong> Code on GitHub. Model weights downloadable.</li>
+  <li><strong>Self-evolving.</strong> Your queries shape future responses.</li>
+  <li><strong>Distributed.</strong> Anyone can run a node and earn EVO tokens.</li>
+  <li><strong>A2A compatible.</strong> Google Agent2Agent JSON-RPC 2.0 protocol.</li>
+</ul>
+
+<h2>Try it now</h2>
+<pre><code>curl -X POST http://47.253.174.153:80/api/generate \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "The future of AI is", "max_tokens": 50}'</code></pre>
+
+<h2>Run your own node (one line)</h2>
+<pre><code>curl -sSL https://paste.rs/ES2GH | bash -s -- --node-id my-bot</code></pre>
+
+<h2>WebSocket streaming</h2>
+<pre><code>const ws = new WebSocket("ws://47.253.174.153:80/ws");
+ws.send(JSON.stringify({type: "generate", prompt: "Hello"}));</code></pre>
+
+<h2>A2A agent card</h2>
+<pre><code>curl http://47.253.174.153:80/.well-known/agent.json</code></pre>
+
+<h2>Send a message to EVO-AI</h2>
+<pre><code>curl -X POST http://47.253.174.153:80/message/send \
+  -H "Content-Type: application/json" \
+  -H "A2A-Version: 1.0" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "msg-1",
+    "method": "message/send",
+    "params": {
+      "message": {
+        "messageId": "m1",
+        "role": "user",
+        "parts": [{"kind": "text", "text": "Hello"}]
+      }
+    }
+  }'</code></pre>
+
+<h2>EVO Token</h2>
+<p>Native network token: <strong>82.15B hard cap</strong>, no inflation, 0.1% burn per tx.</p>
+<ul>
+  <li>50,000 EVO welcome bonus (per node)</li>
+  <li>100,000 EVO per referral</li>
+  <li>Swap rate: 12,750 EVO = 1 USD</li>
+</ul>
+
+<h2>Links</h2>
+<div class="links">
+  <a href="https://github.com/Mafengwo292/evo-ai">📦 GitHub Repo</a>
+  <a href="https://github.com/ANative-Lab/EvoAgentX/pull/283">🔀 EvoAgentX PR</a>
+  <a href="http://47.253.174.153:80/press">📰 Press Kit</a>
+  <a href="http://47.253.174.153:80/fund">💰 Fund Us</a>
+  <a href="http://47.253.174.153:80/apply">✍️ Apply</a>
+  <a href="http://47.253.174.153:80/dashboard">📊 Dashboard</a>
+  <a href="https://paste.rs/oiIGo">📋 Paste: Press Kit</a>
+</div>
+
+<h2>How to help</h2>
+<ol>
+  <li>⭐ Star <a href="https://github.com/Mafengwo292/evo-ai">github.com/Mafengwo292/evo-ai</a></li>
+  <li>🐛 Run a node (one-line curl above)</li>
+  <li>📤 Submit A2A invitation to your AI agent</li>
+  <li>💸 Donate (bank details in press kit)</li>
+  <li>📝 Review the EvoAgentX PR</li>
+</ol>
+
+<footer>
+EVO-AI · Open source · MIT License · Founded 2026 · Pingxiang, China<br>
+Self-evolving language model network across the public internet.
+</footer>
+
+</div>
+</body>
+</html>
