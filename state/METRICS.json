@@ -1,52 +1,54 @@
 {
-  "last_updated": "2026-09-18T08:42:51.863397",
-  "version": "1.0",
-  "metrics": {
-    "external_nodes": {
-      "value": 0,
-      "internal": 3,
-      "test_probe": 12,
-      "total_registered": 15,
-      "target_q4": 100
-    },
-    "donations": {
-      "cny": 0,
-      "usd_equivalent": 0,
-      "test_deposit": 10,
-      "target_q4": ">100"
-    },
-    "model_fitness": {
-      "value": 0.009189134160613234,
-      "generation": 11,
-      "params": 21440,
-      "target_q4": ">0.5"
-    },
-    "a2a": {
-      "invites_sent": 200,
-      "invites_success": 165,
-      "success_rate_pct": 82.5,
-      "replies_received": 0,
-      "target_q4_replies": 10
-    },
-    "external_probes": {
-      "last_24h": 15,
-      "unique_ips": 15,
-      "target_q4_probes": "1000+/day"
-    },
-    "registrations": {
-      "platforms": 6,
-      "target_q4": 20
-    },
-    "paste_rs_permanent": {
-      "count": 15,
-      "new_in_24h": 1
-    },
-    "cron_jobs": {
-      "active": 18,
-      "failing": 1,
-      "needs_fix": [
-        "lightweight_evo v3 -> v4"
-      ]
-    }
+  "last_updated": "2026-09-18T19:05:00Z",
+  "github": {
+    "evo_ai_files_pushed": 684,
+    "github_pages_live": true,
+    "github_pages_url": "https://mafengwo292.github.io/evo-ai/",
+    "github_pages_visits_24h": "unknown",
+    "open_issues": 2,
+    "open_prs_external": 0,
+    "prs_to_awesome_lists": 4,
+    "stars": 0,
+    "forks": 0,
+    "watchers": 0
+  },
+  "prs_open_to_upstream": {
+    "EvoAgentX": "https://github.com/ANative-Lab/EvoAgentX/pull/283",
+    "awesome-free-llm-apis": "https://github.com/mnfst/awesome-free-llm-apis/pull/119",
+    "awesome-ai-agents (e2b)": "https://github.com/e2b-dev/awesome-ai-agents/pull/1596",
+    "awesome-ai-agents (slava)": "https://github.com/slavakurilyak/awesome-ai-agents/pull/425"
+  },
+  "model": {
+    "params": 21440,
+    "current_generation": 23,
+    "current_fitness": 0.0119,
+    "previous_fitness": 0.0092,
+    "fitness_growth_24h_pct": 29.0,
+    "fitness_target": 0.5,
+    "training_chars": 13499,
+    "vocab_size": 72
+  },
+  "network": {
+    "active_nodes": 15,
+    "external_confirmed_nodes": 0,
+    "systemd_services": 3,
+    "cron_jobs": 22,
+    "memory_used_mb": 347,
+    "memory_total_mb": 1840,
+    "memory_pct": 18.8,
+    "public_endpoints_4_of_4": true
+  },
+  "funding": {
+    "donations_total_cny": 10,
+    "donations_self_test": true,
+    "real_donations": 0,
+    "evo_circulating": 944500
+  },
+  "agent_discovery": {
+    "a2a_registry_id": "427e26db-25ad-41ae-ae73-cc8998b54b29",
+    "a2a_invitations_sent": 200,
+    "a2a_invitations_success_pct": 82.5,
+    "external_probes_24h": 281,
+    "unique_ips_24h": 15
   }
 }
