@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18T19:05:00Z",
+  "last_updated": "2026-09-19T08:54:00Z",
   "evo_token": {
     "circulating": 944500,
     "total_supply": 82150000000,
@@ -9,15 +9,16 @@
   },
   "model": {
     "params": 21440,
-    "fitness_current": 0.0119,
+    "fitness_current": 0.0476,
     "fitness_previous": 0.0092,
     "fitness_target": 0.5,
     "fitness_growth_24h": "+29%",
-    "generation": 23,
-    "training_chars": 13499,
-    "vocab_size": 72,
+    "generation": 167,
+    "training_chars": 42776,
+    "vocab_size": 87,
     "evolution_algorithm": "(1+lambda)-ES",
-    "last_improvement": "Gen 22→23, +0.0001"
+    "last_improvement": "Gen 22\u219223, +0.0001",
+    "fitness_progress_to_target_pct": 9.5
   },
   "network": {
     "public_ip": "47.253.174.153",
