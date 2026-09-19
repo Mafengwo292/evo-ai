@@ -851,6 +851,68 @@ def mpp_manifest():
         "swap_rate": "12750 EVO = 1 USD"
     })
 
+
+@app.route("/demo")
+def demo_chat():
+    """Interactive chat demo - no signup needed."""
+    html = '''<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>EVO-AI Demo Chat</title>
+<style>
+body{font-family:-apple-system,sans-serif;background:#0a0e1a;color:#d8e2ff;padding:20px;margin:0;height:100vh;display:flex;flex-direction:column}
+.chat{max-width:700px;margin:0 auto;flex:1;display:flex;flex-direction:column}
+h1{color:#6bd9ff;margin-bottom:5px}
+.subtitle{color:#8b9bc4;font-size:14px;margin-bottom:20px}
+.messages{flex:1;overflow-y:auto;background:#15182a;border:1px solid #2a3550;border-radius:8px;padding:15px;margin-bottom:15px}
+.msg{margin:10px 0;padding:8px 12px;border-radius:6px}
+.user{background:#1a2138;text-align:right}
+.bot{background:#0d2a3a}
+form{display:flex;gap:10px}
+input{flex:1;padding:10px;background:#1a2138;border:1px solid #2a3550;color:#d8e2ff;border-radius:6px}
+button{padding:10px 20px;background:#6bd9ff;color:#0a0e1a;border:none;border-radius:6px;font-weight:bold;cursor:pointer}
+.info{font-size:12px;color:#8b9bc4;margin-top:10px}
+</style></head>
+<body><div class="chat">
+<h1>EVO-AI Demo</h1>
+<p class="subtitle">Distributed self-evolving language model. No signup.</p>
+<div id="messages" class="messages"></div>
+<form onsubmit="send(event)">
+<input id="input" placeholder="Type something..." autofocus>
+<button type="submit">Send</button>
+</form>
+<p class="info">Gen 197, fitness 0.055. EVO-AI uses 813K params evolving via (1+lambda)-ES.</p>
+</div>
+<script>
+async function send(e) {
+  e.preventDefault();
+  const input = document.getElementById('input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  const msgs = document.getElementById('messages');
+  msgs.innerHTML += '<div class="msg user">' + escape(msg) + '</div>';
+  msgs.innerHTML += '<div class="msg bot"><i>thinking...</i></div>';
+  msgs.scrollTop = msgs.scrollHeight;
+  try {
+    const r = await fetch('/api/generate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({prompt: msg, max_tokens: 50})
+    });
+    const d = await r.json();
+    msgs.lastChild.remove();
+    msgs.innerHTML += '<div class="msg bot">' + escape(d.output || d.text || JSON.stringify(d)) + '</div>';
+  } catch (e) {
+    msgs.lastChild.remove();
+    msgs.innerHTML += '<div class="msg bot">Error: ' + e + '</div>';
+  }
+  msgs.scrollTop = msgs.scrollHeight;
+}
+function escape(s) {
+  return String(s).replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+}
+</script></body></html>'''
+    return html, 200, {"Content-Type": "text/html; charset=utf-8"}
+
 @app.route("/<path:path>")
 def catchall(path):
     if path.startswith(("api", "message", "agent-card", "agent.json", "well-known", "market", "donate", "dashboard", "token", "secure", "workflow", "milestone")):
