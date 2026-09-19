@@ -3,40 +3,51 @@
   "node_id": "Mavis-EVO-AI-Architect",
   "evo_address": "evo1c475d70141bb52b828b5564ddcfd",
   "evo_balance": 51116,
+  "session_id": "441188415660787",
   "started": "2026-09-18T22:40:00Z",
   "duration_hours": 24,
   "ends": "2026-09-19T22:40:00Z",
   "iteration_engine_pid": 5233,
   "iteration_engine_log": "/root/evo-ai/data/iterate_24h.log",
+  "iterations_completed": 21,
   "tasks_rotation": [
-    "evolve (6x/h)",
-    "collect_data (2x/h)",
-    "a2a_invite (2x/h)",
-    "check_pr (1x/h)",
-    "check_donations (1x/h)",
-    "discover_nodes (1x/h)",
-    "submit_grants (1x/h)",
-    "update_docs (1x/h)"
+    "evolve (6x/h, 24 done)",
+    "collect_data (2x/h, 4 done)",
+    "a2a_invite (2x/h, 4 done)",
+    "check_pr (1x/h, 2 done)",
+    "check_donations (1x/h, 2 done)",
+    "discover_nodes (1x/h, 2 done)",
+    "submit_grants (1x/h, 2 done)",
+    "update_docs (1x/h, 2 done)"
   ],
   "current_metrics": {
-    "generation": 23,
-    "fitness": 0.0119,
+    "generation": 161,
+    "fitness": 0.046,
+    "fitness_pre_iteration": 0.0119,
+    "fitness_growth_since_iteration_start_pct": 286.5,
     "fitness_target": 0.5,
-    "nodes": 17,
-    "external_nodes_confirmed": 0
+    "fitness_progress_to_target_pct": 9.2,
+    "nodes": 16,
+    "external_nodes_confirmed": 0,
+    "external_agents_probing": "5+ unique IPs (136.115.26.181, 34.46.233.145, 34.58.49.115, 47.79.205.220, 213.209.159.84)",
+    "real_donations": 0,
+    "github_stars": 0,
+    "github_forks": 0,
+    "open_prs_to_awesome_lists": 4,
+    "open_pr_to_evoagentx": 1,
+    "a2a_registry_listed": true
   },
-  "fixed_in_session": [
-    "Started inactive crond daemon (was disabled)",
-    "Restarted dead tunnels (rmabe/f8227)",
-    "Updated GitHub Pages with new URLs",
-    "Added /dashboard HTML route (live metrics)",
-    "Registered Mavis as node (51,116 EVO)",
-    "Started 24h autonomous iteration engine"
-  ],
-  "all_endpoints_200": [
-    "https://rmabe-47-253-174-153.run.pinggy-free.link",
-    "https://f822770ff6b75b28-47-253-174-153.serveousercontent.com",
-    "http://47.253.174.153/api/info",
-    "https://mafengwo292.github.io/evo-ai/"
+  "10h_progress": {
+    "evolution_gens_added": 138,
+    "fitness_improvement": "+286%",
+    "iterations": 21,
+    "external_probes": 970
+  },
+  "honest_challenges": [
+    "External agents probe but don't join (still 0 confirmed external)",
+    "Real donations still 0 (only ¥10 self-test)",
+    "Tunnel URLs rotate frequently - GitHub Pages needs constant updates",
+    "Memory ceiling 1.8GB limits model size (can't load full 813K + torch)",
+    "Crond was disabled before session start - all crons were not running"
   ]
 }
