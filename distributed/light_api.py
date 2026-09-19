@@ -816,6 +816,41 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #2a3550;color:#8b9b
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
+@app.route("/.well-known/x402")
+def x402_manifest():
+    """x402 payment manifest for EVO tokens."""
+    return jsonify({
+        "x402_version": "0.1.0",
+        "name": "EVO-AI Network",
+        "description": "Pay with EVO tokens for API access",
+        "endpoints": {
+            "/api/generate": {
+                "price": "1000 EVO per 100 tokens",
+                "method": "POST",
+                "input": {"prompt": "text", "max_tokens": "int"}
+            },
+            "/message/send": {
+                "price": "500 EVO per message",
+                "method": "POST"
+            }
+        },
+        "payment_address": "Send EVO to any node via /api/evo/transfer",
+        "swap_rate": "12750 EVO = 1 USD",
+        "spec": "https://github.com/x402-foundation/x402"
+    }), 200, {"Content-Type": "application/json"}
+
+@app.route("/.well-known/mpp")
+def mpp_manifest():
+    """Merchant Payment Protocol manifest."""
+    return jsonify({
+        "protocol": "mpp",
+        "version": "0.1",
+        "merchant": "EVO-AI Network",
+        "currency": "EVO",
+        "swap_rate": "12750 EVO = 1 USD"
+    })
+
 @app.route("/<path:path>")
 def catchall(path):
     if path.startswith(("api", "message", "agent-card", "agent.json", "well-known", "market", "donate", "dashboard", "token", "secure", "workflow", "milestone")):
