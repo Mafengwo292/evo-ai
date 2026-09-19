@@ -2,7 +2,27 @@
 
 All notable changes to EVO-AI are documented here.
 
+## [0.5.1] - 2026-09-19 12:30
+
+### Autonomous progress (24h engine)
+- **Fitness 0.0119 → 0.0538 (+352%) in 13h**
+- Generation 23 → 191 (+168 gens)
+- Training data 4KB → 50KB (AI-focused Wikipedia articles)
+- Vocab 74 → 89
+
+### Fixed
+- Crond daemon was disabled → now active, 23 cron jobs running
+- Tunnel watchdog actively self-heals every 5 min
+- 136.115.26.181 (Google Cloud, Iowa) probed agent.json 12 times
+- /dashboard HTML route added (real-time, 30s auto-refresh)
+
+### A2A Registry improvements
+- Skills: 2 → 6 (join, generate, heartbeat, stats, selftest, message)
+- 21 unique tags matching trending categories
+
 ## [0.5.0] - 2026-09-18
+
+
 
 ### Added
 - 🚀 **GitHub repo live**: https://github.com/Mafengwo292/evo-ai (684 files, 116 MB)
@@ -61,3 +81,28 @@ All notable changes to EVO-AI are documented here.
 - Initial nanoGPT-based architecture
 - Distributed scheduler skeleton
 - Anti-mode-collapse engine
+
+## [0.5.1] - 2026-09-19
+
+### Autonomous progress (24h engine)
+- **Fitness 0.0119 → 0.0538 (+352%) in 13h**
+- Generation 23 → 191 (+168 gens)
+- Training data 4KB → 50KB (10x, AI-focused Wikipedia articles)
+- Vocab 74 → 89
+
+### Fixed
+- Crond daemon was disabled → now active, 23 cron jobs running
+- Tunnel watchdog actively self-heals every 5 min
+- 136.115.26.181 (Google Cloud, Iowa) probed agent.json 12 times - persistent A2A discovery
+- 136.243.228.194 (DataForSEO) probed once
+- /dashboard HTML route added (real-time, 30s auto-refresh)
+
+### A2A Registry improvements
+- Skills: generate, join → join, generate, heartbeat, stats, selftest, message (6 skills)
+- 21 unique tags matching trending: llm-client, agent-protocol, observability, orchestration, selftest
+- Will re-crawl on next registry cycle
+
+### External probes (24h)
+- 970 external requests
+- 5+ real agent IPs doing A2A discovery
+- 0 actually joined (most are crawlers/researchers, not nodes)
