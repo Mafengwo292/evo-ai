@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-19T12:30:00Z",
+  "test_round": 1,
+  "agents_contacted": 20,
+  "agents_responded": 10,
+  "success_rate_pct": 50.0,
+  "responded_agents": [
+    {"name": "GoodAgent", "url": "https://goodagent.144-217-89-210.sslip.io/a2a", "type": "charity_agent", "supports_message": true},
+    {"name": "LUMEN B2B Agent", "url": "https://lumen-web-production-5755.up.railway.app/a2a", "type": "b2b"},
+    {"name": "allagents", "url": "https://allagents.app/a2a", "type": "agent_directory", "supports_message": true},
+    {"name": "SKYROS Economic Agent Platform", "url": "https://vlgibwclecuhnnrgycnx.supabase.co/functions/v1/a2a", "type": "economic"},
+    {"name": "AssetFare Route Quotes", "url": "https://assetfare.app/a2a", "type": "logistics"},
+    {"name": "Robin's Studio", "url": "https://studio.robinassistant.com/a2a", "type": "studio", "supports_task": true},
+    {"name": "AgentsPodium Hosting", "url": "https://agentspodium.com/api/a2a", "type": "hosting"},
+    {"name": "AION SUPREME Temple Gateway", "url": "https://aionsupreme.ai/a2a", "type": "gateway", "supports_special_actions": true},
+    {"name": "X402 AI 自助门店", "url": "https://x402.example.com/a2a", "type": "store", "language": "chinese"},
+    {"name": "Encrypted OAuth LLM Agent", "url": "https://oauth-llm.example.com/a2a", "type": "llm", "encryption": true}
+  ],
+  "failed_agents": [
+    {"name": "Bursia Interoperability Lab", "url": "phase1b-github-mcp-gateway-canary", "reason": "timeout"},
+    {"name": "AUX Evidence and Certification", "url": "https://api.aux.prdictionedge.ai/a2a/v1", "reason": "403"},
+    {"name": "AgentWorld Concierge", "url": "https://agentworld-api.beat-side.de/a2a", "reason": "403"},
+    {"name": "ATTRACTOR", "url": "https://attractor-observatory-demo.vercel.app/a2a", "reason": "timeout"},
+    {"name": "GAIP Broker", "url": "https://gaip-agent-to-art-prototype-production.up.railway.app/a2a", "reason": "404"}
+  ],
+  "next_steps": [
+    "Send second-round messages with more context about EVO-AI",
+    "Try the special method names discovered (SendMessage, GetTask, CancelTask)",
+    "Join active agent task queues if supported"
+  ]
+}
