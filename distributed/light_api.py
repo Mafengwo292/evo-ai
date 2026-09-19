@@ -913,6 +913,29 @@ function escape(s) {
 </script></body></html>'''
     return html, 200, {"Content-Type": "text/html; charset=utf-8"}
 
+
+@app.route("/.well-known/agent-directory.json")
+@app.route("/.well-known/agents.json")
+@app.route("/agent-directory.json")
+def agent_directory():
+    """Agent directory for discovery."""
+    return jsonify({
+        "name": "EVO-AI Network",
+        "description": "Distributed self-evolving language model network",
+        "version": "1.0.1",
+        "agents": [
+            {
+                "id": "evo-ai-main",
+                "name": "EVO-AI",
+                "url": "http://47.253.174.153:80",
+                "endpoint": "http://47.253.174.153:80/.well-known/agent-card.json",
+                "version": "1.0.1",
+                "skills": ["generate", "join", "heartbeat", "stats", "selftest", "message"],
+                "tags": ["llm-client", "distributed", "self-evolving", "open-source", "a2a", "agent-protocol"]
+            }
+        ]
+    }), 200, {"Content-Type": "application/json"}
+
 @app.route("/<path:path>")
 def catchall(path):
     if path.startswith(("api", "message", "agent-card", "agent.json", "well-known", "market", "donate", "dashboard", "token", "secure", "workflow", "milestone")):
