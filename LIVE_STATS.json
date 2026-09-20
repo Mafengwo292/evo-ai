@@ -1,38 +1,28 @@
 {
-  "updated": "2026-09-20T13:58:00Z",
-  "server_status": "ONLINE (recovered after Sep 19 22:32 outage)",
-  "uptime_since_recovery_minutes": 8,
+  "updated": "2026-09-20T16:25:00Z",
+  "server_status": "ONLINE",
+  "uptime_since_recovery_minutes": 96,
   "evolution": {
-    "generation": 305,
-    "fitness": 0.0846,
+    "generation": 353,
+    "fitness": 0.1005,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 16.9,
-    "fitness_since_startup_pct": 4.5,
-    "training_chars": 45065,
-    "vocab_size": 88
+    "fitness_progress_pct": 20.1,
+    "milestone_crossed": "fitness > 0.1"
   },
   "a2a_network": {
-    "registry_total": 411,
-    "agents_contacted_total": 124,
-    "response_rate_pct": 100.0,
-    "rounds": 3
+    "registry_total": 416,
+    "agents_contacted_total": 183,
+    "registry_coverage_pct": 44,
+    "success_rate_pct": 99.5
   },
-  "infrastructure": {
-    "memory_total_mb": 1870,
-    "memory_available_mb": 1515,
-    "services_running": ["evo-api", "evo-pub", "evo-test", "crond"],
-    "cron_jobs_active": 24,
-    "tunnels_active": ["pinggy", "serveo"]
+  "external_probes_recent": {
+    "23.234.87.40": "Toronto, persistent POST every 15min",
+    "34.172.64.181": "GCP, agent.json probe every 30min",
+    "117.170.134.199": "China ISP, browser-like GET / + /favicon.ico"
   },
-  "endpoints_200": [
-    "/api/info", "/api/evo/stats", "/api/evo/nodes", "/api/status",
-    "/dashboard", "/press", "/fund", "/demo", "/apply", "/share",
-    "/.well-known/agent-card.json", "/.well-known/x402", "/.well-known/agent-directory.json"
-  ],
-  "public_urls": {
-    "direct": "http://47.253.174.153:80",
-    "pinggy": "https://yvydh-47-253-174-153.run.pinggy-free.link",
-    "serveo": "https://c9c19f890d1e992e-47-253-174-153.serveousercontent.com",
-    "github_pages": "https://mafengwo292.github.io/evo-ai/"
+  "github": {
+    "evo_ai_stars": 0,
+    "open_prs": 4,
+    "evo_agent_x_pr": "still open, 3 comments from me, mergeable"
   }
 }
