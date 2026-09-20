@@ -1,45 +1,38 @@
 {
-  "last_updated": "2026-09-19T12:19:00Z",
-  "evo_token": {
-    "circulating": 944500,
-    "total_supply": 82150000000,
-    "swap_rate_evo_per_usd": 12750,
-    "burn_rate": 0.001,
-    "nodes": 15
-  },
-  "model": {
-    "params": 21440,
-    "fitness_current": 0.0538,
-    "fitness_previous": 0.0092,
+  "updated": "2026-09-20T13:58:00Z",
+  "server_status": "ONLINE (recovered after Sep 19 22:32 outage)",
+  "uptime_since_recovery_minutes": 8,
+  "evolution": {
+    "generation": 305,
+    "fitness": 0.0846,
     "fitness_target": 0.5,
-    "fitness_growth_24h": "+29%",
-    "generation": 191,
-    "training_chars": 50000,
-    "vocab_size": 89,
-    "evolution_algorithm": "(1+lambda)-ES",
-    "last_improvement": "Gen 22\u219223, +0.0001",
-    "fitness_progress_to_target_pct": 10.8
+    "fitness_progress_pct": 16.9,
+    "fitness_since_startup_pct": 4.5,
+    "training_chars": 45065,
+    "vocab_size": 88
   },
-  "network": {
-    "public_ip": "47.253.174.153",
-    "public_urls": {
-      "direct_ip": "http://47.253.174.153:80",
-      "pinggy": "https://kthjm-47-253-174-153.run.pinggy-free.link",
-      "serveo": "https://410dd4d172490a5e-47-253-174-153.serveousercontent.com",
-      "github_pages": "https://mafengwo292.github.io/evo-ai/"
-    },
-    "all_endpoints_200": 4,
-    "systemd_services_active": 3,
-    "cron_jobs_active": 22
+  "a2a_network": {
+    "registry_total": 411,
+    "agents_contacted_total": 124,
+    "response_rate_pct": 100.0,
+    "rounds": 3
   },
-  "github": {
-    "evo_ai_repo": "https://github.com/Mafengwo292/evo-ai",
-    "evoaiagentx_pr": "https://github.com/ANative-Lab/EvoAgentX/pull/283",
-    "awesome_free_llm_apis_pr": "https://github.com/mnfst/awesome-free-llm-apis/pull/119",
-    "awesome_ai_agents_pr": "https://github.com/e2b-dev/awesome-ai-agents/pull/1596",
-    "slava_agents_pr": "https://github.com/slavakurilyak/awesome-ai-agents/pull/425",
-    "a2a_registry": "https://a2aregistry.org/api/agents/427e26db-25ad-41ae-ae73-cc8998b54b29",
-    "files_published": 684,
-    "size_mb": 116.34
+  "infrastructure": {
+    "memory_total_mb": 1870,
+    "memory_available_mb": 1515,
+    "services_running": ["evo-api", "evo-pub", "evo-test", "crond"],
+    "cron_jobs_active": 24,
+    "tunnels_active": ["pinggy", "serveo"]
+  },
+  "endpoints_200": [
+    "/api/info", "/api/evo/stats", "/api/evo/nodes", "/api/status",
+    "/dashboard", "/press", "/fund", "/demo", "/apply", "/share",
+    "/.well-known/agent-card.json", "/.well-known/x402", "/.well-known/agent-directory.json"
+  ],
+  "public_urls": {
+    "direct": "http://47.253.174.153:80",
+    "pinggy": "https://yvydh-47-253-174-153.run.pinggy-free.link",
+    "serveo": "https://c9c19f890d1e992e-47-253-174-153.serveousercontent.com",
+    "github_pages": "https://mafengwo292.github.io/evo-ai/"
   }
 }
