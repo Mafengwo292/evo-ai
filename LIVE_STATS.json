@@ -1,28 +1,42 @@
 {
-  "updated": "2026-09-20T16:25:00Z",
-  "server_status": "ONLINE",
-  "uptime_since_recovery_minutes": 96,
+  "updated": "2026-09-20T22:37:00Z",
+  "day": 2,
+  "server_uptime_hours": 8.8,
   "evolution": {
-    "generation": 353,
-    "fitness": 0.1005,
+    "generation": 413,
+    "fitness": 0.1176,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 20.1,
-    "milestone_crossed": "fitness > 0.1"
+    "fitness_progress_pct": 23.5,
+    "session_growth": "Gen 353 → 413 (+60 in 6h after recovery)"
   },
   "a2a_network": {
     "registry_total": 416,
-    "agents_contacted_total": 183,
-    "registry_coverage_pct": 44,
-    "success_rate_pct": 99.5
+    "contacts_logged": 194,
+    "registry_coverage_pct": 46.6,
+    "success_rate_pct": 99.5,
+    "notable_peers": [
+      "MERCURY Web Fetch",
+      "Aurelius Agent",
+      "Packrift A2A Packaging Procurement",
+      "AgentSearch",
+      "ANP2 Network Relay",
+      "ARCASOS Short-Term Rental Search"
+    ]
   },
-  "external_probes_recent": {
-    "23.234.87.40": "Toronto, persistent POST every 15min",
-    "34.172.64.181": "GCP, agent.json probe every 30min",
-    "117.170.134.199": "China ISP, browser-like GET / + /favicon.ico"
+  "external_probes": {
+    "39.100.79.4": "Alibaba Cloud - nmap scanning (HNAP1, /boaform/admin)",
+    "23.234.85.88": "Toronto - persistent POST / every 15min",
+    "34.172.64.181": "GCP - agent.json every 30min",
+    "75.102.33.73": "agent-card.json GET, new"
   },
   "github": {
     "evo_ai_stars": 0,
     "open_prs": 4,
-    "evo_agent_x_pr": "still open, 3 comments from me, mergeable"
+    "evo_agent_x_pr_comments": 3
+  },
+  "memory": {
+    "total_mb": 1870,
+    "used_mb": 610,
+    "available_mb": 1260
   }
 }
