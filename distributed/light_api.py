@@ -1011,6 +1011,24 @@ generate, join, heartbeat, stats, selftest, message
 llm-client, distributed, self-evolving, open-source, a2a, agent-protocol, observability
 ''', 200, {"Content-Type": "text/plain; charset=utf-8"}
 
+
+@app.route("/", methods=["POST"])
+def root_post():
+    """Handle POST / - return A2A-compatible message."""
+    return jsonify({
+        "jsonrpc": "2.0",
+        "id": None,
+        "result": {
+            "kind": "message",
+            "role": "agent",
+            "messageId": f"root-post-{int(time.time())}",
+            "parts": [{
+                "kind": "text",
+                "text": "EVO-AI: I accept A2A JSON-RPC 2.0 at POST /message/send. Also try GET /.well-known/agent-card.json or POST /api/generate for inference. Public docs: http://47.253.174.153:80/press"
+            }]
+        }
+    }), 200, {"Content-Type": "application/json", "A2A-Version": "1.0"}
+
 @app.route("/<path:path>")
 def catchall(path):
     if path.startswith(("api", "message", "agent-card", "agent.json", "well-known", "market", "donate", "dashboard", "token", "secure", "workflow", "milestone")):
