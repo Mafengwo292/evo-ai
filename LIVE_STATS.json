@@ -1,42 +1,35 @@
 {
-  "updated": "2026-09-20T22:37:00Z",
-  "day": 2,
-  "server_uptime_hours": 8.8,
+  "updated": "2026-09-21T08:30:00Z",
+  "day": 3,
+  "server_uptime_hours": 18.6,
   "evolution": {
-    "generation": 413,
-    "fitness": 0.1176,
+    "generation": 527,
+    "fitness": 0.1509,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 23.5,
-    "session_growth": "Gen 353 → 413 (+60 in 6h after recovery)"
+    "fitness_progress_pct": 30.2,
+    "milestones_crossed": ["fitness > 0.1", "fitness > 0.15"],
+    "training_chars": 50000,
+    "vocab_size": 96
   },
   "a2a_network": {
     "registry_total": 416,
-    "contacts_logged": 194,
-    "registry_coverage_pct": 46.6,
-    "success_rate_pct": 99.5,
-    "notable_peers": [
-      "MERCURY Web Fetch",
-      "Aurelius Agent",
-      "Packrift A2A Packaging Procurement",
-      "AgentSearch",
-      "ANP2 Network Relay",
-      "ARCASOS Short-Term Rental Search"
-    ]
+    "contacts_logged": 223,
+    "unique_domains": 223,
+    "registry_coverage_pct": 53.6,
+    "success_rate_active_pct": 100.0
   },
-  "external_probes": {
-    "39.100.79.4": "Alibaba Cloud - nmap scanning (HNAP1, /boaform/admin)",
-    "23.234.85.88": "Toronto - persistent POST / every 15min",
+  "new_protocols_supported": [
+    "A2A JSON-RPC 2.0 (POST /message/send)",
+    "A2A Agent Card (/.well-known/agent-card.json)",
+    "A2A Directory (/.well-known/agent-directory.json)",
+    "MCP Server Card (/.well-known/mcp.json)",
+    "x402 Payment Protocol (/.well-known/x402)",
+    "MPP Merchant Payment (/.well-known/mpp)",
+    "llms.txt and agents.txt (LLM discovery)"
+  ],
+  "external_probes_persistent": {
+    "35.205.139.4": "GCP - does full discovery sweep (agent.json + x402 + mcp)",
     "34.172.64.181": "GCP - agent.json every 30min",
-    "75.102.33.73": "agent-card.json GET, new"
-  },
-  "github": {
-    "evo_ai_stars": 0,
-    "open_prs": 4,
-    "evo_agent_x_pr_comments": 3
-  },
-  "memory": {
-    "total_mb": 1870,
-    "used_mb": 610,
-    "available_mb": 1260
+    "23.234.85.88": "Toronto tzulo - POST / every 15min, NOW returns A2A message"
   }
 }
