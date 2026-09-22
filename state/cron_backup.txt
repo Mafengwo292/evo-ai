@@ -1,0 +1,39 @@
+Warning: Permanently added '47.253.174.153' (ED25519) to the list of known hosts.
+# A2A pulse every 3 hours (single instance, no restart loop)
+0 */3 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/a2a_3hour_pulse.py >> /root/evo-ai/data/a2a_pulse_cron.log 2>&1
+
+# Send A2A invites every 3 hours (different target set)
+0 */3 * * * sleep 30 && /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/send_a2a_invites.py >> /root/evo-ai/data/a2a_invites.log 2>&1
+
+# Codeberg signup retry daily
+0 3 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/codeberg_signup.py >> /root/evo-ai/data/codeberg_retry.log 2>&1
+
+# Daily report every 6 hours
+0 */6 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/daily_report.py >> /root/evo-ai/data/daily_report.log 2>&1
+
+# Re-publish evo-node script every 6 hours
+0 */6 * * * /root/evo-ai/scripts/evo_node_publish_cron.sh
+
+# HEARTBEAT: single check every 5 min, NO restart loops
+*/5 * * * * /root/evo-ai/scripts/heartbeat_loop.sh >> /root/evo-ai/data/heartbeat_cron.log 2>&1
+
+# HEALTH CHECK every 10 min (just log, no restart)
+*/10 * * * * echo "[08:52] api=000 load=" >> /root/evo-ai/data/health_cron.log 2>&1
+0 * * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/a2a_smart_invite.py >> /root/evo-ai/data/a2a_smart_cron.log 2>&1
+0 */12 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/agent_registry_hunter.py >> /root/evo-ai/data/registry_hunt.log 2>&1
+0 */12 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/grant_hunter.py >> /root/evo-ai/data/grant_hunt.log 2>&1
+0 */8 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/cold_outreach.py >> /root/evo-ai/data/cold_outreach.log 2>&1
+*/30 * * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/dynamic_press.py >> /root/evo-ai/data/dynamic_press.log 2>&1
+0 */2 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/real_a2a_inviter_v5.py >> /root/evo-ai/data/expand_a2a.log 2>&1
+0 */4 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/discover_agents.py >> /root/evo-ai/data/discover_agents.log 2>&1
+0 0 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/auto_announce.py >> /root/evo-ai/data/auto_announce.log 2>&1
+0 0 * * 0 /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/press_ab_test.py >> /root/evo-ai/data/press_ab_test.log 2>&1
+0 23 * * 0 /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/weekly_review.py >> /root/evo-ai/state/weekly_review.log 2>&1
+0 */2 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/self_drive_safe.py >> /root/evo-ai/state/self_drive.log 2>&1
+# GitHub monitor every 30 min
+*/30 * * * * PATH=/root/miniconda/envs/evo/bin:/root/miniconda/bin:/usr/local/bin:/usr/bin:/bin python /root/evo-ai/scripts/github_monitor.py >> /root/evo-ai/data/github_monitor.log 2>&1
+0 * * * * /root/evo-ai/scripts/lightweight_evo_runner.sh
+*/5 * * * * /root/evo-ai/scripts/tunnel_watchdog.sh >> /root/evo-ai/data/tunnel_watchdog.log 2>&1
+@reboot /root/evo-ai/scripts/start_24h_cycle.sh
+0 */6 * * * /root/miniconda/envs/evo/bin/python /root/evo-ai/scripts/continuous_evolution_v2.py >> /root/evo-ai/data/continuous_evolution.log 2>&1
+0 */2 * * * PATH=/root/miniconda/envs/evo/bin:/root/miniconda/bin:/usr/local/bin:/usr/bin:/bin timeout 300 python /root/evo-ai/scripts/real_a2a_inviter_v2.py >> /root/evo-ai/data/real_a2a_invites.log 2>&1
