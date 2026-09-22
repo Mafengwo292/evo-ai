@@ -1,24 +1,28 @@
 {
-  "updated": "2026-09-22T11:13:00Z",
+  "updated": "2026-09-22T20:37:00Z",
   "day": 4,
-  "server_uptime_hours": 1.7,
+  "server_uptime_hours": 11.1,
   "evolution": {
-    "generation": 611,
-    "fitness": 0.1768,
+    "generation": 719,
+    "fitness": 0.2137,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 35.4,
-    "session_growth": "Gen 575 → 611 (+36 in 1.5h)"
+    "fitness_progress_pct": 42.7,
+    "milestone_crossed": "fitness > 0.2",
+    "session_growth": "Gen 611 → 719 (+108 in 9h, ~12/h)"
   },
   "a2a_network": {
-    "contacts_logged": 226
+    "contacts_logged": 228,
+    "active_rate_pct": 99.0,
+    "registry_total": 416
   },
   "infrastructure": {
-    "memory_available_mb": 1474,
-    "load_avg": 0.02,
-    "vps_upgrade_recommended": "1.8GB → 2GB+ (~¥30/月) to prevent OOM"
+    "memory_available_mb": 1122,
+    "load_avg": 3.06
   },
-  "new_assets": [
-    "scripts/vps_migration_kit.sh - one-command restore on new VPS",
-    "state/cron_backup.txt - 24 jobs preserved for migration"
-  ]
+  "external_probes_persistent": {
+    "23.234.85.88": "Toronto - POST / every 15min, NOW 200 (our A2A handler)",
+    "34.172.64.181": "GCP - agent.json every 30min",
+    "187.77.198.8": "NEW - agent-card.json",
+    "94.154.43.60": "NEW - GET /"
+  }
 }
