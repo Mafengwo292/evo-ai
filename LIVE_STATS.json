@@ -1,35 +1,35 @@
 {
-  "updated": "2026-09-21T08:30:00Z",
-  "day": 3,
-  "server_uptime_hours": 18.6,
+  "updated": "2026-09-22T09:38:00Z",
+  "day": 4,
+  "server_status": "ONLINE (recovered after 21.5h outage)",
   "evolution": {
-    "generation": 527,
-    "fitness": 0.1509,
+    "generation": 575,
+    "fitness": 0.1657,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 30.2,
-    "milestones_crossed": ["fitness > 0.1", "fitness > 0.15"],
+    "fitness_progress_pct": 33.1,
     "training_chars": 50000,
-    "vocab_size": 96
+    "vocab_size": 112
   },
   "a2a_network": {
     "registry_total": 416,
     "contacts_logged": 223,
-    "unique_domains": 223,
-    "registry_coverage_pct": 53.6,
-    "success_rate_active_pct": 100.0
+    "registry_coverage_pct": 53.6
   },
-  "new_protocols_supported": [
-    "A2A JSON-RPC 2.0 (POST /message/send)",
-    "A2A Agent Card (/.well-known/agent-card.json)",
-    "A2A Directory (/.well-known/agent-directory.json)",
-    "MCP Server Card (/.well-known/mcp.json)",
-    "x402 Payment Protocol (/.well-known/x402)",
-    "MPP Merchant Payment (/.well-known/mpp)",
-    "llms.txt and agents.txt (LLM discovery)"
+  "infrastructure": {
+    "memory_total_mb": 1870,
+    "memory_available_mb": 1523,
+    "services_running": ["evo-api", "evo-pub", "evo-test", "crond"],
+    "cron_jobs_active": 24,
+    "tunnels_active": ["pinggy (amydh)", "serveo (87e1183)"]
+  },
+  "outage_history": [
+    {"date": "Sep 19 22:32", "duration_hours": 15, "recovered": true},
+    {"date": "Sep 21 12:00", "duration_hours": 21.5, "recovered": true}
   ],
-  "external_probes_persistent": {
-    "35.205.139.4": "GCP - does full discovery sweep (agent.json + x402 + mcp)",
-    "34.172.64.181": "GCP - agent.json every 30min",
-    "23.234.85.88": "Toronto tzulo - POST / every 15min, NOW returns A2A message"
+  "public_urls": {
+    "direct": "http://47.253.174.153:80",
+    "pinggy": "https://amydh-47-253-174-153.run.pinggy-free.link",
+    "serveo": "https://87e118301cb64e36-47-253-174-153.serveousercontent.com",
+    "github_pages": "https://mafengwo292.github.io/evo-ai/"
   }
 }
