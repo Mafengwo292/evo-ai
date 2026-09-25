@@ -1,33 +1,31 @@
 {
-  "updated": "2026-09-25T16:15:00Z",
+  "updated": "2026-09-25T16:57:00Z",
   "day": 7,
-  "server_uptime_hours": 0.3,
+  "server_uptime_hours": 1.0,
   "evolution": {
-    "generation": 863,
-    "fitness": 0.2612,
+    "generation": 875,
+    "fitness": 0.2656,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 52.2,
-    "milestones_crossed": ["0.1", "0.15", "0.2", "0.25"],
-    "session_growth": "Gen 719 → 863 (+144 across 3rd outage)"
+    "fitness_progress_pct": 53.1,
+    "milestone_crossed": "fitness > 0.25",
+    "rate_gen_per_hour": 16
   },
   "a2a_network": {
-    "contacts_logged": 228
+    "contacts_logged": 237,
+    "dead_skipped": 45,
+    "registry_saturated": true,
+    "notable_peers": [
+      "Korean Public Data Agent",
+      "Feeless402 Rail Quote (x402 payment)",
+      "Asgardian Village",
+      "SCRIPTMASTERLABS Trust Router",
+      "LUMEN B2B Agent",
+      "Scry Wallet Intelligence (Solana)",
+      "Prestige Hardscape Construction"
+    ]
   },
   "infrastructure": {
-    "memory_available_mb": 1508,
-    "services_active": ["evo-api", "evo-pub", "evo-test", "crond"],
-    "cron_jobs_active": 24,
-    "tunnels_active": ["pinggy (zgwbm)", "serveo (47c2fc6)"]
-  },
-  "outage_history": [
-    {"date": "Sep 19 22:32", "duration_hours": 15, "recovered": true},
-    {"date": "Sep 21 12:00", "duration_hours": 21.5, "recovered": true},
-    {"date": "Sep 23 21:00", "duration_hours": 43, "recovered": true}
-  ],
-  "public_urls": {
-    "direct": "http://47.253.174.153:80",
-    "pinggy": "https://zgwbm-47-253-174-153.run.pinggy-free.link",
-    "serveo": "https://47c2fc658f7c5c6c-47-253-174-153.serveousercontent.com",
-    "github_pages": "https://mafengwo292.github.io/evo-ai/"
+    "memory_available_mb": 1486,
+    "load_avg": 0.10
   }
 }
