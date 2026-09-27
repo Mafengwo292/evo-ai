@@ -1,34 +1,24 @@
 {
-  "updated": "2026-09-27T15:55:00Z",
+  "updated": "2026-09-27T16:10:00Z",
   "day": 9,
-  "server_uptime_hours": 0.3,
+  "server_role": "BRIDGE - VPN for agent's internet access, NOT production",
   "evolution": {
     "generation": 1139,
     "fitness": 0.3546,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 70.9,
-    "milestone_crossed": "fitness > 0.35",
-    "session_growth": "Gen 875 → 1139 (+264 across 4th outage, 47h)"
-  },
-  "a2a_network": {
-    "contacts_logged": 237
+    "fitness_progress_pct": 70.9
   },
   "infrastructure": {
-    "memory_available_mb": 1524,
-    "memory_watchdog_active": true,
-    "cron_jobs_active": 25,
-    "services_active": ["evo-api", "evo-pub", "evo-test", "crond"]
+    "memory_available_mb": 1546,
+    "load_avg": 0.06,
+    "services_active": ["evo-api only"],
+    "cron_jobs_active": 5,
+    "crons_disabled": 20
   },
-  "outage_history": [
-    {"date": "Sep 19 22:32", "duration_hours": 15, "recovered": true},
-    {"date": "Sep 21 12:00", "duration_hours": 21.5, "recovered": true},
-    {"date": "Sep 23 21:00", "duration_hours": 43, "recovered": true},
-    {"date": "Sep 25 17:00", "duration_hours": 47, "recovered": true}
-  ],
-  "public_urls": {
-    "direct": "http://47.253.174.153:80",
-    "pinggy": "https://mohol-47-253-174-153.run.pinggy-free.link",
-    "serveo": "https://3e68419cb6fdc9da-47-253-174-153.serveousercontent.com",
-    "github_pages": "https://mafengwo292.github.io/evo-ai/"
+  "operational_principle": "Server is the agent's internet bridge. Don't overload.",
+  "sshd_hardening": {
+    "MaxStartups": "3:50:6 (was 10:30:100)",
+    "MaxSessions": "5 (was 10)",
+    "iptables_rate_limit": "5 SSH attempts/min per IP"
   }
 }
