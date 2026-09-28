@@ -1,24 +1,27 @@
 {
-  "updated": "2026-09-27T16:10:00Z",
-  "day": 9,
-  "server_role": "BRIDGE - VPN for agent's internet access, NOT production",
+  "updated": "2026-09-28T09:26:00Z",
+  "day": 10,
+  "server_uptime_hours": 17.7,
+  "longest_uptime_since_breakout": true,
   "evolution": {
-    "generation": 1139,
-    "fitness": 0.3546,
+    "generation": 1259,
+    "fitness": 0.3981,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 70.9
+    "fitness_progress_pct": 79.6,
+    "rate_gen_per_hour": 6
   },
   "infrastructure": {
-    "memory_available_mb": 1546,
-    "load_avg": 0.06,
-    "services_active": ["evo-api only"],
+    "memory_available_mb": 1539,
+    "memory_used_pct": 18,
+    "load_avg": 0.14,
     "cron_jobs_active": 5,
-    "crons_disabled": 20
+    "services_active": ["evo-api"]
   },
-  "operational_principle": "Server is the agent's internet bridge. Don't overload.",
-  "sshd_hardening": {
-    "MaxStartups": "3:50:6 (was 10:30:100)",
-    "MaxSessions": "5 (was 10)",
-    "iptables_rate_limit": "5 SSH attempts/min per IP"
-  }
+  "reliability_improvements": [
+    "sshd MaxStartups 10:30:100 → 3:50:6",
+    "iptables SSH rate limit 5/min/IP",
+    "Cron density 25 → 5",
+    "Service count 3 → 1",
+    "Memory watchdog every 30min"
+  ]
 }
