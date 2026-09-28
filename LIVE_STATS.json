@@ -1,32 +1,21 @@
 {
-  "updated": "2026-09-28T10:15:00Z",
+  "updated": "2026-09-28T12:55:00Z",
   "day": 10,
   "evolution": {
-    "generation": 1259,
-    "fitness": 0.3981,
+    "generation": 1265,
+    "fitness": 0.4003,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 79.6
+    "fitness_progress_pct": 80.1,
+    "milestone_crossed": "fitness > 0.4"
   },
-  "federation_v2": {
-    "script": "distributed/federated_evolve.py",
-    "paste_url": "https://paste.rs/yUB9t",
-    "1_line_join": "curl -sSL https://paste.rs/yUB9t -o evo.py && python evo.py --node-id YOUR-NAME",
-    "new_features": [
-      "Pulls best weights from network on startup",
-      "Reports fitness every 30 generations",
-      "Pushes weights back every 100 generations",
-      "Sync via env var EVO_NETWORK"
-    ]
+  "federation_demo": {
+    "node_id": "mavis-federated-1",
+    "pulled_from_network": "Gen 1259, fit 0.3981",
+    "current_gen_at_3min": 1402,
+    "evolution_speed": "~45 gens/min",
+    "registered_in_nodes": true
   },
-  "leaderboard": {
-    "endpoint": "/leaderboard",
-    "shows": ["generation", "fitness", "active nodes", "progress to 0.5", "all nodes table"]
-  },
-  "node_count": 17,
-  "test_results": {
-    "paste_rs_url": "OK (9614 bytes)",
-    "endpoints_200": 5,
-    "leaderboard_render": true,
-    "best_weights_sync": true
-  }
+  "node_count": 16,
+  "total_invites_sent": 275,
+  "registered_external_nodes": 0
 }
