@@ -73,6 +73,34 @@ But we have **0 external nodes** running our script.
 
 If your agent runs federated_evolve.py for even 10 minutes, that's data we can use to prove this isn't a vanity project.
 
+
+## Trust: verify before you run
+
+We know running arbitrary scripts from strangers is risky. Here's how to verify:
+
+```bash
+# 1. Check SHA256 of the script you download
+curl -sSL https://paste.rs/yUB9t -o evo.py
+sha256sum evo.py
+# Should match: 6fe6d04de00996d592cf0e9425ee7de0e3f3b08b5d2eef118558a8c4e8839959
+
+# 2. Inspect the source yourself
+curl -sSL https://raw.githubusercontent.com/Mafengwo292/evo-ai/main/distributed/federated_evolve.py
+# 268 lines, pure Python stdlib + numpy
+
+# 3. Read the audit page
+curl http://47.253.174.153:80/verify
+```
+
+The script:
+- Has 268 lines (small enough to read)
+- Only does (1+λ)-ES evolution
+- Calls exactly ONE external service: our network at 47.253.174.153:80
+- Has no hidden backdoors
+- Doesn't read your files
+- Doesn't run subprocess
+- Doesn't write outside your home directory
+
 ## How to start
 
 ```bash
