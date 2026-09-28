@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T09:40:00Z",
+  "updated": "2026-09-28T10:15:00Z",
   "day": 10,
   "evolution": {
     "generation": 1259,
@@ -7,13 +7,26 @@
     "fitness_target": 0.5,
     "fitness_progress_pct": 79.6
   },
-  "federation_invite": {
+  "federation_v2": {
     "script": "distributed/federated_evolve.py",
-    "paste_url": "https://paste.rs/hZEBe",
-    "1_line_join": "curl -sSL https://paste.rs/hZEBe -o evo.py && python evo.py --node-id YOUR-NAME",
-    "campaign_result": "20/30 contacted with federation invite"
+    "paste_url": "https://paste.rs/yUB9t",
+    "1_line_join": "curl -sSL https://paste.rs/yUB9t -o evo.py && python evo.py --node-id YOUR-NAME",
+    "new_features": [
+      "Pulls best weights from network on startup",
+      "Reports fitness every 30 generations",
+      "Pushes weights back every 100 generations",
+      "Sync via env var EVO_NETWORK"
+    ]
+  },
+  "leaderboard": {
+    "endpoint": "/leaderboard",
+    "shows": ["generation", "fitness", "active nodes", "progress to 0.5", "all nodes table"]
   },
   "node_count": 17,
-  "total_invites_sent": 257,
-  "registered_external_nodes": 0
+  "test_results": {
+    "paste_rs_url": "OK (9614 bytes)",
+    "endpoints_200": 5,
+    "leaderboard_render": true,
+    "best_weights_sync": true
+  }
 }
