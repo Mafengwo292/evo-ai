@@ -1,21 +1,33 @@
 {
-  "updated": "2026-09-28T12:55:00Z",
-  "day": 10,
+  "updated": "2026-09-29T09:48:00Z",
+  "day": 11,
+  "server_uptime_hours": 40.4,
   "evolution": {
-    "generation": 1265,
-    "fitness": 0.4003,
+    "generation": 1301,
+    "fitness": 0.4132,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 80.1,
-    "milestone_crossed": "fitness > 0.4"
+    "fitness_progress_pct": 82.6,
+    "session_growth": "Gen 1289 → 1301 (+12 in 15h, slowed by 6h cron)"
   },
-  "federation_demo": {
+  "federation_node": {
     "node_id": "mavis-federated-1",
-    "pulled_from_network": "Gen 1259, fit 0.3981",
-    "current_gen_at_3min": 1402,
-    "evolution_speed": "~45 gens/min",
-    "registered_in_nodes": true
+    "status": "restarted (was stuck at Gen 2742 since 04:57)",
+    "current_gen": 1267,
+    "rate": "~45 gens/min",
+    "total_sessions": 2
   },
-  "node_count": 16,
-  "total_invites_sent": 275,
+  "trust_layer": {
+    "verify_endpoint": "/verify",
+    "sha256_published": "6fe6d04d...",
+    "how_to_verify_doc": "HOW_TO_VERIFY.md (paste.rs/Cs8B4)",
+    "lines_of_code": 268
+  },
+  "external_activity": {
+    "117.170.133.142": "China ISP - just hit /dashboard + /leaderboard (NEW user!)",
+    "23.234.86.44": "Toronto - POST / every 15min, persistent",
+    "34.186.82.14": "GCP - agent.json every 30min",
+    "34.71.184.74": "GCP - agent.json"
+  },
+  "total_invites_sent": 287,
   "registered_external_nodes": 0
 }
