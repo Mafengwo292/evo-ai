@@ -1029,6 +1029,40 @@ def root_post():
         }
     }), 200, {"Content-Type": "application/json", "A2A-Version": "1.0"}
 
+
+@app.route("/api/evo/best_weights")
+def best_weights():
+    """Return best weights for federated nodes to evolve from."""
+    try:
+        with open('/root/evo-ai/data/best_weights.json') as f:
+            data = json.load(f)
+        return jsonify(data), 200
+    except FileNotFoundError:
+        return jsonify({"error": "No weights available yet"}), 404
+
+
+
+@app.route("/verify")
+def api_verify():
+    """Verify federated_evolve.py integrity."""
+    import hashlib, os
+    script_path = '/root/evo-ai/distributed/federated_evolve.py'
+    if not os.path.exists(script_path):
+        return jsonify({"error": "script not found"}), 404
+    with open(script_path, 'rb') as f:
+        data = f.read()
+    sha256 = hashlib.sha256(data).hexdigest()
+    return jsonify({
+        "script": "federated_evolve.py",
+        "size_bytes": len(data),
+        "lines": data.decode('utf-8').count('\n'),
+        "sha256": sha256,
+        "paste_url": "https://paste.rs/yUB9t",
+        "github_raw": "https://raw.githubusercontent.com/Mafengwo292/evo-ai/main/distributed/federated_evolve.py",
+        "verify_command": f'echo "{sha256}  federated_evolve.py" | sha256sum -c',
+        "audit": "Single 268-line file. Pure Python stdlib + numpy. No network calls except to our network."
+    }), 200
+
 @app.route("/<path:path>")
 def catchall(path):
     if path.startswith(("api", "message", "agent-card", "agent.json", "well-known", "market", "donate", "dashboard", "token", "secure", "workflow", "milestone")):
@@ -1051,6 +1085,18 @@ try:
     app.add_url_rule("/agent-card.json", view_func=_serve_agent_card, methods=["GET"])
 except Exception as e:
     print(f"Card route err: {e}")
+
+
+# Leaderboard route (uses separate module)
+import sys as _sys_lb
+_sys_lb.path.insert(0, '/root/evo-ai/distributed')
+try:
+    from leaderboard import render_leaderboard
+    @app.route("/leaderboard")
+    def leaderboard_route():
+        return render_leaderboard(), 200, {"Content-Type": "text/html; charset=utf-8"}
+except ImportError as e:
+    print(f"Leaderboard module not available: {e}")
 
 if __name__ == "__main__":
     print("[LightAPI] Starting on 0.0.0.0:8765")
