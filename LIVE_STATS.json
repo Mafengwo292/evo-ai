@@ -1,33 +1,27 @@
 {
-  "updated": "2026-09-29T09:48:00Z",
-  "day": 11,
-  "server_uptime_hours": 40.4,
+  "updated": "2026-09-30T12:11:00Z",
+  "day": 12,
+  "server_uptime_hours": 68.5,
   "evolution": {
-    "generation": 1301,
-    "fitness": 0.4132,
+    "generation": 1331,
+    "fitness": 0.4255,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 82.6,
-    "session_growth": "Gen 1289 → 1301 (+12 in 15h, slowed by 6h cron)"
+    "fitness_progress_pct": 85.1,
+    "session_growth": "Gen 1301 → 1331 (+30 in 26h)"
   },
   "federation_node": {
     "node_id": "mavis-federated-1",
-    "status": "restarted (was stuck at Gen 2742 since 04:57)",
-    "current_gen": 1267,
+    "current_gen": 2044,
     "rate": "~45 gens/min",
-    "total_sessions": 2
-  },
-  "trust_layer": {
-    "verify_endpoint": "/verify",
-    "sha256_published": "6fe6d04d...",
-    "how_to_verify_doc": "HOW_TO_VERIFY.md (paste.rs/Cs8B4)",
-    "lines_of_code": 268
+    "last_heartbeat": "12:07:27 (fresh)",
+    "watchdog": "active, no restarts needed"
   },
   "external_activity": {
-    "117.170.133.142": "China ISP - just hit /dashboard + /leaderboard (NEW user!)",
-    "23.234.86.44": "Toronto - POST / every 15min, persistent",
-    "34.186.82.14": "GCP - agent.json every 30min",
-    "34.71.184.74": "GCP - agent.json"
+    "117.170.133.142": "China Mobile Shanghai - BROWSING our pages (dashboard, leaderboard, donate, fund, press) over 2 days!",
+    "23.234.86.44": "Toronto - 21 hits, persistent",
+    "35.205.139.4": "GCP - 17 hits",
+    "34.133.228.213": "12 hits"
   },
-  "total_invites_sent": 287,
+  "total_invites_sent": 292,
   "registered_external_nodes": 0
 }
