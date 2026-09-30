@@ -1,30 +1,30 @@
 {
-  "updated": "2026-09-30T12:20:00Z",
-  "day": 12,
-  "server_uptime_hours": 68.6,
+  "updated": "2026-09-30T22:39:00Z",
+  "day": 13,
+  "server_uptime_hours": 78.9,
   "evolution": {
-    "generation": 1331,
-    "fitness": 0.4255,
+    "generation": 1337,
+    "fitness": 0.4283,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 85.1
+    "fitness_progress_pct": 85.7
   },
   "federation_node": {
     "node_id": "mavis-federated-1",
-    "current_gen": 2058,
-    "rate": "~45 gens/min",
-    "status": "live, watchdog active"
+    "current_gen": 1521,
+    "watchdog_action": "auto-restarted at 22:30 (was stuck 35min)",
+    "rate": "~45 gens/min"
   },
   "github": {
-    "stars": 1,
-    "stargazers": ["gainsgeek"],
+    "stars": 0,
+    "note": "gainsgeek starred then unstarred (or fluke). Net 0.",
     "forks": 0,
     "open_issues": 2,
-    "open_prs": 4,
-    "pages_build": "working (200)"
+    "open_prs": 4
   },
-  "milestone_this_session": "FIRST EXTERNAL STAR - gainsgeek starred our repo",
-  "external_activity": {
-    "117.170.133.142": "Shanghai - explored /dashboard, /leaderboard, /donate, /fund, /press, /api/register over 2 days",
-    "gainsgeek": "GitHub - starred our repo"
+  "external_activity_6h": {
+    "195.242.214.214": "M247 Montreal - 29 hits, GET / every 20s",
+    "23.234.86.44": "Toronto - 22 hits",
+    "129.121.128.211": "Oracle Singapore - 19 hits",
+    "117.170.133.142": "Shanghai - 15 hits, more exploration"
   }
 }
