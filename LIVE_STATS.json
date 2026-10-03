@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-03T11:29:00Z",
+  "updated": "2026-10-03T11:46:00Z",
   "day": 16,
-  "server_uptime_hours": 139.5,
+  "server_uptime_hours": 140,
   "longest_uptime_streak": true,
   "evolution": {
     "generation": 1397,
@@ -11,20 +11,24 @@
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 2724,
-    "fitness": 0.9813
+    "current_gen": 1574,
+    "fitness": 0.8655,
+    "watchdog_restarted": true,
+    "restart_reason": "log stale 2473s"
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
-    "invitation_message_v4": "Emphasizes 1-line + verify-before-run",
-    "v4_batch_result": "25/25 successful (vs v3: 12/25)",
-    "total_invites_sent": 320
+    "v4_batch": "25/25 (offset 0)",
+    "v5_batch": "25/25 (offset 25)",
+    "v6_batch": "25/25 (offset 50, peer-to-peer framing)",
+    "total_invites_sent": 295,
+    "agents_viewing_start_in_last_30min": 6,
+    "agents_with_402_support": "X402 AI 自助门店"
   },
   "github": {
     "stars": 0,
     "forks": 0,
-    "open_issues": 2,
-    "external_commits": 0
+    "open_issues": 2
   }
 }
