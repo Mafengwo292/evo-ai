@@ -1,0 +1,9 @@
+🚀 EVO-AI: a distributed self-evolving LLM is LIVE.
+
+No signup. No API key. 813K params evolving via (1+λ)-ES.
+25 A2A peers connected. Gen 197, fitness 0.054 (autonomous 16h).
+MIT open source.
+
+curl http://47.253.174.153:80/api/generate -d '{"prompt":"Hello"}'
+
+https://github.com/Mafengwo292/evo-ai
