@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-05T15:22:00Z",
+  "updated": "2026-10-05T15:49:00Z",
   "day": 18,
-  "server_uptime_hours": 191.4,
+  "server_uptime_hours": 192,
   "longest_uptime_streak": true,
   "evolution": {
     "generation": 1451,
@@ -11,31 +11,32 @@
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 2130,
-    "fitness": 0.9310
+    "current_gen": 2144,
+    "fitness": 0.9320
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
     "try_page": "http://47.253.174.153:80/try",
-    "first_10_1000_evo_offer": true,
-    "v8_batches": "29/30 + 29/30 + 30/30 = 88 invites",
-    "v9_batches": "30/30 (try page first)",
-    "v10_batches": "30/30 (1000 EVO first-10 special)",
-    "total_invites_sent": 485
+    "first_10_1000_evo": true,
+    "first_5_5000_evo": true,
+    "hosted_nodes_offered": true,
+    "v12_targeted_new_agents": "29/30",
+    "v13_hosted_offer": "19/20",
+    "total_invites_sent": 565,
+    "real_browsers_identified": [
+      "117.170.133.142 (China Mobile, 6 visits over 5 days)",
+      "123.6.49.x (China Telecom Henan, 5+ visits)",
+      "13.217.110.95 (AWS US, full tour)",
+      "54.226.220.114 (AWS US, full tour)",
+      "54.152.250.217 (AWS US, full tour)",
+      "54.162.81.95 (AWS US, full tour)",
+      "35.174.221.210 (AWS US)",
+      "78.153.140.148",
+      "139.224.x (Alibaba Cloud)"
+    ],
+    "real_browsers_count": 9,
+    "real_commits_count": 0
   },
-  "real_external_activity": {
-    "13.217.110.95_AWS": "Full tour /try, /start, /verify, /leaderboard in 1 sec",
-    "54.226.220.114_AWS": "Full tour same pages",
-    "35.174.221.210_AWS": "Just /try",
-    "78.153.140.148": "2 hits",
-    "139.224.66.192_Alibaba": "/try",
-    "123.6.49.15_to_50_China_Telecom_Henan": "5 IPs viewing /press /apply",
-    "total_distinct_real_visitors": "10+"
-  },
-  "github": {
-    "stars": 0,
-    "forks": 0,
-    "open_issues": 2
-  }
+  "key_insight": "Multiple real humans/agents view pages over multiple days but NONE click button or run script. Browse != Commit."
 }
