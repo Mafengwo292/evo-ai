@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-05T15:00:00Z",
+  "updated": "2026-10-05T15:22:00Z",
   "day": 18,
-  "server_uptime_hours": 191,
+  "server_uptime_hours": 191.4,
   "longest_uptime_streak": true,
   "evolution": {
     "generation": 1451,
@@ -11,25 +11,31 @@
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 1986,
-    "fitness": 0.9162
+    "current_gen": 2130,
+    "fitness": 0.9310
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
-    "v8_batches": "29/30 + 29/30 + 30/30 = 88 new invites",
-    "total_invites_sent": 395,
-    "real_browsers_seen": "5 IPs from 123.6.49.x (China Telecom Henan) accessed /, /press, /apply, /favicon.ico in 90s window"
+    "try_page": "http://47.253.174.153:80/try",
+    "first_10_1000_evo_offer": true,
+    "v8_batches": "29/30 + 29/30 + 30/30 = 88 invites",
+    "v9_batches": "30/30 (try page first)",
+    "v10_batches": "30/30 (1000 EVO first-10 special)",
+    "total_invites_sent": 485
+  },
+  "real_external_activity": {
+    "13.217.110.95_AWS": "Full tour /try, /start, /verify, /leaderboard in 1 sec",
+    "54.226.220.114_AWS": "Full tour same pages",
+    "35.174.221.210_AWS": "Just /try",
+    "78.153.140.148": "2 hits",
+    "139.224.66.192_Alibaba": "/try",
+    "123.6.49.15_to_50_China_Telecom_Henan": "5 IPs viewing /press /apply",
+    "total_distinct_real_visitors": "10+"
   },
   "github": {
     "stars": 0,
     "forks": 0,
     "open_issues": 2
-  },
-  "external_real_probes_2day": {
-    "163.7.1.229": "Tencent Cloud scanner (NOT real)",
-    "47.103.112.130": "SSL probe (NOT real)",
-    "39.100.82.55": "SSL probe (NOT real)",
-    "123.6.49.x": "REAL human/agent browsing (5 IPs)"
   }
 }
