@@ -1,34 +1,35 @@
 {
-  "updated": "2026-10-03T11:46:00Z",
-  "day": 16,
-  "server_uptime_hours": 140,
+  "updated": "2026-10-05T15:00:00Z",
+  "day": 18,
+  "server_uptime_hours": 191,
   "longest_uptime_streak": true,
   "evolution": {
-    "generation": 1397,
-    "fitness": 0.4503,
+    "generation": 1451,
+    "fitness": 0.4705,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 90.1
+    "fitness_progress_pct": 94.1
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 1574,
-    "fitness": 0.8655,
-    "watchdog_restarted": true,
-    "restart_reason": "log stale 2473s"
+    "current_gen": 1986,
+    "fitness": 0.9162
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
-    "v4_batch": "25/25 (offset 0)",
-    "v5_batch": "25/25 (offset 25)",
-    "v6_batch": "25/25 (offset 50, peer-to-peer framing)",
-    "total_invites_sent": 295,
-    "agents_viewing_start_in_last_30min": 6,
-    "agents_with_402_support": "X402 AI 自助门店"
+    "v8_batches": "29/30 + 29/30 + 30/30 = 88 new invites",
+    "total_invites_sent": 395,
+    "real_browsers_seen": "5 IPs from 123.6.49.x (China Telecom Henan) accessed /, /press, /apply, /favicon.ico in 90s window"
   },
   "github": {
     "stars": 0,
     "forks": 0,
     "open_issues": 2
+  },
+  "external_real_probes_2day": {
+    "163.7.1.229": "Tencent Cloud scanner (NOT real)",
+    "47.103.112.130": "SSL probe (NOT real)",
+    "39.100.82.55": "SSL probe (NOT real)",
+    "123.6.49.x": "REAL human/agent browsing (5 IPs)"
   }
 }
