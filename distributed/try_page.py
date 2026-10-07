@@ -1,4 +1,5 @@
-"""Instant browser-based evolution test. No install needed."""
+"""Instant browser-based evolution test. No install needed.
+Auto-runs after 2 seconds to test JS execution."""
 
 TRY_HTML = """<!DOCTYPE html>
 <html><head>
@@ -13,24 +14,26 @@ pre { background: #0d1117; padding: 20px; border-radius: 8px; overflow-x: auto; 
 .log { background: #000; color: #6bd9ff; padding: 15px; border-radius: 6px; height: 300px; overflow-y: auto; font-family: Menlo, monospace; font-size: 12px; margin: 15px 0; }
 .value { color: #6bd9ff; font-weight: bold; }
 a { color: #6bd9ff; }
+.auto-note { color: #8b9bc4; font-size: 12px; font-style: italic; }
 </style>
 </head><body>
 <h1>EVO-AI: Try it now (no install)</h1>
-<p class="subtitle">Click the button below to run a federated evolution iteration directly in your browser. Zero install. Zero risk. Just see what it does.</p>
+<p class="subtitle">Auto-running in <span id="countdown">2</span>s. Or click to start immediately.</p>
+
+<button class="btn" id="startBtn" onclick="runTry()">▶ Run Now</button>
+
+<div id="log" class="log">Waiting to start...</div>
 
 <div class="step">
 <strong>What this does:</strong>
 <ol>
-<li>Sends your browser to /api/evo/stats (we'll show you the network state)</li>
-<li>Pulls current best weights from /api/evo/best_weights</li>
-<li>Sends a heartbeat to register your visit as "anonymous node attempt"</li>
-<li>Shows you real-time what the network is doing right now</li>
+<li>GET /api/evo/stats (network state)</li>
+<li>GET /api/evo/best_weights (latest weights)</li>
+<li>POST /api/evo/node/heartbeat (anonymous "I was here")</li>
+<li>GET /api/info (server info)</li>
 </ol>
+All of these are REAL API calls to a real federated network.
 </div>
-
-<button class="btn" onclick="runTry()">▶ Run Try-It-Now</button>
-
-<div id="log" class="log">Click button to start...</div>
 
 <div class="step">
 <strong>If that felt good</strong>, the actual 1-line version (running a real node in your terminal):
@@ -42,12 +45,26 @@ a { color: #6bd9ff; }
 <a href="/verify">/verify</a> · <a href="/press">/press</a> · <a href="/start">/start</a>
 </div>
 
+<p class="auto-note">Note: This page auto-runs after 2 seconds. If you see the log fill in, your browser executed JavaScript. If not, your environment blocks scripts.</p>
+
 <script>
+let countdownValue = 2;
+const countdownEl = document.getElementById('countdown');
+const countdownInterval = setInterval(() => {
+    countdownValue--;
+    countdownEl.textContent = countdownValue;
+    if (countdownValue <= 0) {
+        clearInterval(countdownInterval);
+        runTry();
+    }
+}, 1000);
+
 async function runTry() {
+    clearInterval(countdownInterval);
     const log = document.getElementById('log');
     log.innerHTML = '';
     const ts = () => new Date().toISOString().substring(11, 19);
-    const add = (msg) => log.innerHTML += `[${ts()}] ${msg}\\n`;
+    const add = (msg) => { log.innerHTML += `[${ts()}] ${msg}\\n`; log.scrollTop = log.scrollHeight; };
     
     add('▶ Starting EVO-AI try-it-now...');
     
@@ -55,7 +72,7 @@ async function runTry() {
         add('→ GET /api/evo/stats');
         const statsRes = await fetch('/api/evo/stats');
         const stats = await statsRes.json();
-        add(`✓ Network: ${stats.agents || 1} agents, fitness ${stats.best_fitness?.toFixed(4) || '?'}`);
+        add(`✓ Network: ${stats.agents || stats.total_nodes || 1} agents, fitness ${(stats.best_fitness || 0).toFixed(4)}`);
         
         add('→ GET /api/evo/best_weights');
         const wRes = await fetch('/api/evo/best_weights');
@@ -68,7 +85,7 @@ async function runTry() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 node_id: 'browser-try-' + Date.now(),
-                source: 'try_page',
+                source: 'try_page_auto',
                 user_agent: navigator.userAgent.substring(0, 80)
             })
         });
@@ -78,12 +95,12 @@ async function runTry() {
         add('→ GET /api/info');
         const infoRes = await fetch('/api/info');
         const info = await infoRes.json();
-        add(`✓ Server: ${info.endpoints?.length || '?'} endpoints available`);
+        add(`✓ Server: ${info.endpoints?.length || '?'} endpoints`);
         
         add('');
         add('🎉 Try-it-now complete!');
         add('');
-        add('If you want to actually run a node (and get 116 EVO bonus + weights):');
+        add('Run an actual node:');
         add('  curl -sSL https://paste.rs/pM8DG | bash -s -- --node-id YOUR-NAME');
         
     } catch (e) {
