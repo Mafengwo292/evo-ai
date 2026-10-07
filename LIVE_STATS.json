@@ -1,42 +1,33 @@
 {
-  "updated": "2026-10-05T15:49:00Z",
-  "day": 18,
-  "server_uptime_hours": 192,
+  "updated": "2026-10-07T08:57:00Z",
+  "day": 20,
+  "server_uptime_hours": 233,
   "longest_uptime_streak": true,
   "evolution": {
-    "generation": 1451,
-    "fitness": 0.4705,
+    "generation": 1493,
+    "fitness": 0.4876,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 94.1
+    "fitness_progress_pct": 97.5,
+    "note": "Within 10 generations of target"
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 2144,
-    "fitness": 0.9320
+    "current_gen": 1899,
+    "fitness": 0.9070
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
     "try_page": "http://47.253.174.153:80/try",
-    "first_10_1000_evo": true,
-    "first_5_5000_evo": true,
-    "hosted_nodes_offered": true,
-    "v12_targeted_new_agents": "29/30",
-    "v13_hosted_offer": "19/20",
-    "total_invites_sent": 565,
-    "real_browsers_identified": [
-      "117.170.133.142 (China Mobile, 6 visits over 5 days)",
-      "123.6.49.x (China Telecom Henan, 5+ visits)",
-      "13.217.110.95 (AWS US, full tour)",
-      "54.226.220.114 (AWS US, full tour)",
-      "54.152.250.217 (AWS US, full tour)",
-      "54.162.81.95 (AWS US, full tour)",
-      "35.174.221.210 (AWS US)",
-      "78.153.140.148",
-      "139.224.x (Alibaba Cloud)"
-    ],
-    "real_browsers_count": 9,
-    "real_commits_count": 0
+    "v14_feedback_request": "18/20 sent (asking what's blocking adoption)",
+    "total_invites_sent": 583,
+    "real_browsers_2day": 14,
+    "real_commits_2day": 0,
+    "incoming_a2a_messages": "6 POST / in 2 sec from 222.247.141.97 (China Telecom, persistent agent)"
   },
-  "key_insight": "Multiple real humans/agents view pages over multiple days but NONE click button or run script. Browse != Commit."
+  "github": {
+    "stars": 0,
+    "forks": 0,
+    "open_issues": 2
+  }
 }
