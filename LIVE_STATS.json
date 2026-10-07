@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-07T09:02:00Z",
+  "updated": "2026-10-07T09:46:00Z",
   "day": 20,
-  "server_uptime_hours": 233,
+  "server_uptime_hours": 234,
   "longest_uptime_streak": true,
   "evolution": {
     "generation": 1493,
@@ -11,17 +11,20 @@
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 1899,
-    "fitness": 0.9070
+    "current_gen": 2160,
+    "fitness": 0.9336
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
     "try_page": "http://47.253.174.153:80/try",
-    "try_page_now_auto_runs": true,
-    "v15_ultra_short": "17/20 sent",
-    "total_invites_sent": 600,
+    "v16_first_mover_token": "17/20 sent",
+    "total_invites_sent": 617,
     "real_browsers_2day": 14,
-    "real_commits_2day": 0
+    "real_commits_2day": 0,
+    "persistent_monitors_found": [
+      "136.119.9.23 (Oracle Cloud) - polls /.well-known/agent.json every 30min",
+      "45.198.224.124 - polls GET / every ~2h cron"
+    ]
   }
 }
