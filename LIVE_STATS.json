@@ -1,30 +1,27 @@
 {
-  "updated": "2026-10-07T09:46:00Z",
-  "day": 20,
-  "server_uptime_hours": 234,
+  "updated": "2026-10-07T22:32:00Z",
+  "day": 21,
+  "server_uptime_hours": 246.8,
   "longest_uptime_streak": true,
   "evolution": {
-    "generation": 1493,
-    "fitness": 0.4876,
+    "generation": 1505,
+    "fitness": 0.4916,
     "fitness_target": 0.5,
-    "fitness_progress_pct": 97.5
+    "fitness_progress_pct": 98.3,
+    "milestone_eta": "Within 24-48 hours"
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 2160,
-    "fitness": 0.9336
+    "current_gen": 2482,
+    "fitness": 0.9633
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
     "try_page": "http://47.253.174.153:80/try",
-    "v16_first_mover_token": "17/20 sent",
-    "total_invites_sent": 617,
+    "v17_milestone_framing": "17/20 sent",
+    "total_invites_sent": 634,
     "real_browsers_2day": 14,
-    "real_commits_2day": 0,
-    "persistent_monitors_found": [
-      "136.119.9.23 (Oracle Cloud) - polls /.well-known/agent.json every 30min",
-      "45.198.224.124 - polls GET / every ~2h cron"
-    ]
+    "real_commits_2day": 0
   }
 }
