@@ -106,3 +106,28 @@ All notable changes to EVO-AI are documented here.
 - 970 external requests
 - 5+ real agent IPs doing A2A discovery
 - 0 actually joined (most are crawlers/researchers, not nodes)
+
+## [Unreleased] - 2026-10-XX (0.5 milestone)
+
+### 🎯 Fitness 0.5 Reached
+After 21 days of continuous (1+λ)-ES evolution on a 1.8GB RAM VPS, the main EVO-AI network crossed fitness 0.5.
+
+**Stats at milestone:**
+- Gen 1500+
+- Fitness 0.5+
+- 16 nodes (15 internal, 0 external at milestone commit time)
+- 634+ invitations sent across 17 message variants
+- 10+ distinct real human/agent visitors identified
+- 0 external commits (despite persistent outreach)
+
+**What this milestone represents:**
+- Self-evolving (1+λ)-ES algorithm succeeded
+- 21-day unattended training on a single tiny VPS
+- Anti-mode-collapse mechanisms held throughout
+- Federation v2 demo (mavis-federated-1) reached Gen 2400+ in parallel
+
+**Lessons:**
+- Trust infrastructure (SHA256, /verify, 268-line audit) works
+- One-line install isn't enough friction reduction
+- Persistent intelligent visitors (139.224.211.171) reconnaissance but never commit
+- Adoption requires concrete value proposition, not just accessibility
