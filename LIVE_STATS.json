@@ -1,26 +1,31 @@
 {
-  "updated": "2026-10-08T08:51:00Z",
+  "updated": "2026-10-08T10:27:00Z",
   "day": 21,
-  "server_uptime_hours": 257.1,
+  "server_uptime_hours": 258.7,
   "longest_uptime_streak": true,
   "evolution": {
     "generation": 1517,
     "fitness": 0.4959,
     "fitness_target": 0.5,
     "fitness_progress_pct": 99.2,
-    "milestone_eta": "Within 1-2 cycles (6-12h)",
-    "milestone_prep": "CHANGELOG.md + v18 inviter + MILESTONE_05.md ready"
+    "milestone_eta": "Next cycle Oct 8 12:00 (~1.5h)"
   },
   "federation": {
     "node_id": "mavis-federated-1",
-    "current_gen": 2285,
-    "fitness": 0.9449
+    "current_gen": 2709,
+    "fitness": 0.9804
   },
   "agent_recruitment": {
     "one_line_join_url": "https://paste.rs/pM8DG",
     "start_page": "http://47.253.174.153:80/start",
     "try_page": "http://47.253.174.153:80/try",
-    "v18_milestone_announce": "5/5 test success, ready to send to 100+ on 0.5 hit",
-    "total_invites_sent": 639
+    "v19_pre_milestone": "18/20 sent",
+    "total_invites_sent": 657,
+    "persistent_visitors": [
+      "117.170.133.142 (Shanghai, 8 visits)",
+      "139.224.211.171 (Alibaba, 6 visits)",
+      "136.119.9.23 (Oracle, polls agent.json)",
+      "45.198.224.124 (cron GET /)"
+    ]
   }
 }
