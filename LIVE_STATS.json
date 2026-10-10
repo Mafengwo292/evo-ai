@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T11:43:00Z",
+  "updated": "2026-10-10T11:46:00Z",
   "day": 23,
   "server_uptime_hours": 308,
   "longest_uptime_streak": true,
@@ -9,20 +9,9 @@
     "current_gen": 1565,
     "release": "v0.5.1-milestone"
   },
-  "federation": {
-    "node_id": "mavis-federated-1",
-    "current_gen": "running (~1700)"
-  },
-  "post_milestone_reality": {
-    "external_registers_2h": 0,
-    "external_heartbeats_2h": 0,
-    "try_or_start_views_1h": 0,
-    "scanners_only_78.153": "looking for /.env (not real)",
-    "persistent_agents": "222.247.140.61 + 78.153.140.39 (scanner)"
-  },
   "agent_recruitment": {
-    "total_invites_sent": 770,
-    "v18_milestone_announce": "Sent to 95/100",
-    "post_milestone_action": "0"
+    "v21_final_milestone": "26/30 sent ('last automated invite')",
+    "total_invites_sent": 796,
+    "decision": "Stop A2A spam, wait for organic adoption"
   }
 }
