@@ -131,3 +131,33 @@ After 21 days of continuous (1+λ)-ES evolution on a 1.8GB RAM VPS, the main EVO
 - One-line install isn't enough friction reduction
 - Persistent intelligent visitors (139.224.211.171) reconnaissance but never commit
 - Adoption requires concrete value proposition, not just accessibility
+
+## [0.5.1-milestone] - 2026-10-08 18:00 - 2026-10-10
+
+### 🎯 Fitness 0.5 Milestone Achieved
+After 21 days of continuous (1+λ)-ES evolution on a 1.8GB RAM VPS, the main EVO-AI network crossed fitness 0.5 on Oct 8 18:00 (Gen 1529, Fitness 0.5004).
+
+### Evolution Stats
+- **Gen**: 0 → 1565
+- **Fitness**: 0 → 0.5153
+- **Time**: 21.75 days
+- **Trajectory**: Linear improvement at +0.0022 / 6h cycle
+- **Current state**: 103.1% of 0.5 target
+
+### Federation v2 Stats
+- mavis-federated-1 (live demo): Gen 1695, Fitness 0.8833
+- Reached its own plateau (~0.88-0.98) on synthetic weights
+
+### Adoption Reality
+- **External nodes**: 0
+- **Real browsers identified**: 15+ (117.170.133.142, 139.224.211.171, 136.119.9.23, etc.)
+- **Total invitations sent**: 770
+- **Invitation variants**: 20 different message framings
+- **Persistent human visitors**: 5+ who keep coming back but never commit
+
+### Lessons Learned
+- Trust infrastructure (SHA256 + /verify + 268-line audit) works
+- 1-line install isn't enough friction reduction
+- Real human visitors reconnaissance but never commit
+- Adoption requires concrete value proposition + integration hooks
+- 0.5 milestone is technical; adoption is social
