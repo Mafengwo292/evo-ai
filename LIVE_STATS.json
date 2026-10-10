@@ -1,16 +1,16 @@
 {
-  "updated": "2026-10-10T10:10:00Z",
+  "updated": "2026-10-10T10:12:00Z",
   "day": 23,
   "server_uptime_hours": 306.4,
   "longest_uptime_streak": true,
-  "MILESTONE": {
-    "fitness_0_5_crossed": "2026-10-08T18:00:00Z",
+  "MILESTONE_ACHIEVED": {
+    "fitness_0_5_crossed_at": "2026-10-08T18:00:00Z",
     "fitness_at_crossing": 0.5004,
     "gen_at_crossing": 1529,
     "current_fitness": 0.5153,
     "current_gen": 1565,
     "time_to_reach": "21.75 days",
-    "release_tag": "v0.5.1-milestone",
+    "release": "v0.5.1-milestone",
     "release_url": "https://github.com/Mafengwo292/evo-ai/releases/tag/v0.5.1-milestone"
   },
   "federation": {
@@ -19,8 +19,8 @@
     "fitness": 0.8833
   },
   "agent_recruitment": {
-    "v18_milestone_announce": "95/100 sent to all agents",
+    "v18_milestone_to_95_agents": "Sent",
     "total_invites_sent": 770,
-    "milestone_first_check": "in progress"
+    "post_milestone_engagement": "0 in 30 min"
   }
 }
